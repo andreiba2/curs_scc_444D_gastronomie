@@ -36,7 +36,7 @@ def test_history_route_returns_content():
     response = client.get("/history")
 
     assert response.status_code == 200
-    assert "Baklava History" in response.get_data(as_text=True)
+    assert "The Rich History of Baklava" in response.get_data(as_text=True)
 
 
 def test_serving_tips_route_returns_content():
