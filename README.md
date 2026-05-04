@@ -1,5 +1,7 @@
 # Baklava Flask Application
 
+**Author:** Olteanu Rares - Cristian
+
 A minimal Turkish dessert (baklava) information website built with Flask, designed to run locally, in Docker, or through Jenkins CI/CD.
 
 ## Project Structure
