@@ -23,3 +23,15 @@ Open `http://localhost:8000` after the container starts.
 ## Jenkins
 
 The `Jenkinsfile` runs the test suite and then builds the Docker image.
+
+To run Jenkins locally for this repository:
+
+```bash
+bash scripts/run-jenkins.sh
+```
+
+Then open `http://localhost:8080` and use the initial admin password printed by:
+
+```bash
+sudo docker exec curs-scc-jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
