@@ -26,8 +26,9 @@ pipeline {
             steps {
                 sh '''
                     docker build -t baklava-flask-app:${BUILD_NUMBER} .
-                    docker rm -f baklava_flask_${BUILD_NUMBER} || true
-                    docker run -d --name baklava_flask_${BUILD_NUMBER} -p 8000:8000 baklava-flask-app:${BUILD_NUMBER}
+                    docker stop baklava_flask_app || true
+                    docker rm -f baklava_flask_app || true
+                    docker run -d --name baklava_flask_app -p 8000:8000 baklava-flask-app:${BUILD_NUMBER}
                 '''
             }
         }
