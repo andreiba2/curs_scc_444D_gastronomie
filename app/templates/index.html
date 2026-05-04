@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baklava | Turkish Delight</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="shell">
+        <section class="hero hero-center">
+            <p class="eyebrow">Turkish Dessert</p>
+            <h1>Baklava</h1>
+            <p class="intro">
+                Explore a short baklava page with three routes: recipe, history, and serving tips.
+            </p>
+            <div class="button-row">
+                {% for route in routes %}
+                <a class="route-button" href="{{ route.endpoint }}">{{ route.label }}</a>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>
