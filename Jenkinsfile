@@ -26,8 +26,16 @@ pipeline {
             steps {
                 sh '''
                     docker build -t baklava-flask-app:${BUILD_NUMBER} .
-                    docker stop baklava_flask_app || true
-                    docker rm -f baklava_flask_app || true
+                    
+                    # Stop and remove all existing baklava containers
+                    docker ps -a -q -f "ancestor=baklava-flask-app" | xargs -r docker stop 2>/dev/null || true
+                    docker ps -a -q -f "ancestor=baklava-flask-app" | xargs -r docker rm -f 2>/dev/null || true
+                    
+                    # Kill any other containers using port 8000
+                    docker ps -q --filter "publish=8000" | xargs -r docker stop 2>/dev/null || true
+                    docker ps -a -q --filter "publish=8000" | xargs -r docker rm -f 2>/dev/null || true
+                    
+                    # Start the new container
                     docker run -d --name baklava_flask_app -p 8000:8000 baklava-flask-app:${BUILD_NUMBER}
                 '''
             }
