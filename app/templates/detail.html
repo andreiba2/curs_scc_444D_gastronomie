@@ -11,9 +11,11 @@
         <section class="hero detail-card">
             <p class="eyebrow">Turkish Dessert</p>
             <h1>{{ heading }}</h1>
-            <p class="intro">{{ content }}</p>
+            <div class="content-body">
+                {{ content|safe }}
+            </div>
             <div class="back-row">
-                <a class="route-button" href="/">Back to home</a>
+                <a class="route-button" href="/">← Back to home</a>
             </div>
         </section>
     </main>
