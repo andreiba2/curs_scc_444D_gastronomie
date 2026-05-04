@@ -1,15 +1,35 @@
-FROM python:3.12-slim
+FROM python:3.13-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-WORKDIR /app
+# Create non-root user
+RUN adduser --disabled-password --gecos "" baklava
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Set working directory
+WORKDIR /home/baklava
 
-COPY . .
+# Switch to non-root user
+USER baklava
 
+# Copy requirements
+COPY --chown=baklava:baklava requirements.txt .
+
+# Create and activate virtual environment
+RUN python3 -m venv .venv && \
+    .venv/bin/pip install --no-cache-dir --upgrade pip && \
+    .venv/bin/pip install --no-cache-dir -r requirements.txt
+
+# Copy app files
+COPY --chown=baklava:baklava app app
+COPY --chown=baklava:baklava dockerstart.sh dockerstart.sh
+COPY --chown=baklava:baklava pytest.ini pytest.ini
+
+# Make script executable
+RUN chmod +x dockerstart.sh
+
+# Expose port
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+# Start application
+ENTRYPOINT ["./dockerstart.sh"]
