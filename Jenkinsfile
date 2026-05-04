@@ -3,33 +3,25 @@ pipeline {
 
     stages {
         stage('Build') {
-            agent {
-                docker {
-                    image 'python:3.12-slim'
-                    reuseNode true
-                }
-            }
             steps {
                 sh '''
-                    python -m venv .venv
-                    . .venv/bin/activate
-                    pip install --upgrade pip
-                    pip install -r requirements-dev.txt
+                    docker run --rm \
+                        -v "$WORKSPACE:/app" \
+                        -w /app \
+                        python:3.12-slim \
+                        sh -lc 'python -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && pip install -r requirements-dev.txt'
                 '''
             }
         }
 
         stage('Unit Testing cu Pytest') {
-            agent {
-                docker {
-                    image 'python:3.12-slim'
-                    reuseNode true
-                }
-            }
             steps {
                 sh '''
-                    . .venv/bin/activate
-                    pytest tests/
+                    docker run --rm \
+                        -v "$WORKSPACE:/app" \
+                        -w /app \
+                        python:3.12-slim \
+                        sh -lc '. .venv/bin/activate && pytest tests/'
                 '''
             }
         }
