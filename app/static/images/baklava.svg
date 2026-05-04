@@ -1,0 +1,49 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f5e6d3"/>
+  
+  <!-- Plate -->
+  <ellipse cx="200" cy="220" rx="150" ry="40" fill="#e8dcc8"/>
+  <ellipse cx="200" cy="215" rx="150" ry="38" fill="#f0e8d8"/>
+  
+  <!-- Baklava pieces -->
+  <!-- Piece 1 - Front left -->
+  <path d="M 80 180 L 110 140 L 135 145 L 120 190 Z" fill="#d4a574"/>
+  <path d="M 80 180 L 110 140 L 135 145 L 120 190 Z" fill="none" stroke="#8b6f47" stroke-width="1"/>
+  <path d="M 85 175 L 112 145 L 130 148 L 120 185 Z" fill="#e6b88a" opacity="0.6"/>
+  
+  <!-- Piece 2 - Center -->
+  <path d="M 140 190 L 165 135 L 200 140 L 185 195 Z" fill="#d4a574"/>
+  <path d="M 140 190 L 165 135 L 200 140 L 185 195 Z" fill="none" stroke="#8b6f47" stroke-width="1"/>
+  <path d="M 145 185 L 168 142 L 195 146 L 185 190 Z" fill="#e6b88a" opacity="0.6"/>
+  
+  <!-- Piece 3 - Center right -->
+  <path d="M 200 185 L 225 130 L 265 138 L 240 195 Z" fill="#d4a574"/>
+  <path d="M 200 185 L 225 130 L 265 138 L 240 195 Z" fill="none" stroke="#8b6f47" stroke-width="1"/>
+  <path d="M 205 180 L 228 137 L 260 143 L 240 190 Z" fill="#e6b88a" opacity="0.6"/>
+  
+  <!-- Piece 4 - Right -->
+  <path d="M 260 190 L 285 145 L 320 155 L 295 195 Z" fill="#d4a574"/>
+  <path d="M 260 190 L 285 145 L 320 155 L 295 195 Z" fill="none" stroke="#8b6f47" stroke-width="1"/>
+  <path d="M 265 185 L 288 152 L 315 160 L 295 190 Z" fill="#e6b88a" opacity="0.6"/>
+  
+  <!-- Honey drizzle -->
+  <ellipse cx="120" cy="155" rx="8" ry="5" fill="#d4af37" opacity="0.7"/>
+  <ellipse cx="200" cy="120" rx="6" ry="4" fill="#d4af37" opacity="0.7"/>
+  <ellipse cx="280" cy="145" rx="7" ry="5" fill="#d4af37" opacity="0.7"/>
+  
+  <!-- Pistachio toppings -->
+  <circle cx="100" cy="160" r="3" fill="#2d5016"/>
+  <circle cx="155" cy="145" r="3" fill="#2d5016"/>
+  <circle cx="210" cy="135" r="2.5" fill="#2d5016"/>
+  <circle cx="240" cy="155" r="3" fill="#2d5016"/>
+  <circle cx="285" cy="165" r="2.5" fill="#2d5016"/>
+  
+  <!-- Walnut pieces (darker) -->
+  <circle cx="130" cy="168" r="2" fill="#6b4423"/>
+  <circle cx="175" cy="155" r="2.5" fill="#6b4423"/>
+  <circle cx="250" cy="170" r="2" fill="#6b4423"/>
+  
+  <!-- Text label -->
+  <text x="200" y="280" font-family="serif" font-size="18" fill="#8b6f47" text-anchor="middle" font-weight="bold">Turkish Baklava</text>
+</svg>
