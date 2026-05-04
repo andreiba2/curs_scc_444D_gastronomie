@@ -3,9 +3,15 @@ pipeline {
 
     stages {
         stage('Build') {
+            agent {
+                docker {
+                    image 'python:3.12-slim'
+                    reuseNode true
+                }
+            }
             steps {
                 sh '''
-                    python3 -m venv .venv
+                    python -m venv .venv
                     . .venv/bin/activate
                     pip install --upgrade pip
                     pip install -r requirements-dev.txt
@@ -14,6 +20,12 @@ pipeline {
         }
 
         stage('Unit Testing cu Pytest') {
+            agent {
+                docker {
+                    image 'python:3.12-slim'
+                    reuseNode true
+                }
+            }
             steps {
                 sh '''
                     . .venv/bin/activate
