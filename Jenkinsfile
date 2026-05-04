@@ -5,11 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    docker run --rm \
-                        -v "$WORKSPACE:/app" \
-                        -w /app \
-                        python:3.12-slim \
-                        sh -lc 'python -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && pip install -r requirements-dev.txt'
+                    python3 -m venv .venv
+                    . .venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements-dev.txt
                 '''
             }
         }
@@ -17,11 +16,8 @@ pipeline {
         stage('Unit Testing cu Pytest') {
             steps {
                 sh '''
-                    docker run --rm \
-                        -v "$WORKSPACE:/app" \
-                        -w /app \
-                        python:3.12-slim \
-                        sh -lc '. .venv/bin/activate && pytest tests/'
+                    . .venv/bin/activate
+                    pytest tests/
                 '''
             }
         }
