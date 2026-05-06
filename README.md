@@ -33,7 +33,7 @@ Am scris teste de tip unit test cu `pytest` pentru funcțiile care returnează t
 
  
 ## Docker
-Aplicația a fost containerizată. Imaginea se construiește cu succes, iar containerul rulează și expune portul 5000.
+Aplicația a fost containerizată.. Imaginea se construiește cu succes, iar containerul rulează și expune portul 5000.
 
 **Vizualizare container activ:**
 ![Docker ps](poza_docker.png) .
