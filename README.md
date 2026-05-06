@@ -25,10 +25,10 @@ Ruta de bază: `http://127.0.0.1:5000`
 Am scris teste de tip unit test cu `pytest` pentru funcțiile care returnează textul din aplicație. De asemenea, am folosit `pylint` pentru a verifica la final calitatea codului din fișierul principal.
 
 **Rezultat pytest:**
-![Pytest](poza_pytest.png)
+![Pytest](rezultat_pytest.png)
 
 **Rezultat pylint:**
-![Pylint](poza_pylint.png)
+![Pylint](rezultat_pylint.png)
 
 ## Docker
 Aplicația a fost containerizată. Imaginea se construiește cu succes, iar containerul rulează și expune portul 5000.
