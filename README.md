@@ -38,16 +38,29 @@ Jenkins Pipeline: Configurat în Jenkinsfile și funcțional în totalitate.
 
 Containerizare: Fișier Dockerfile creat; imagine construită și testată pe portul 5000.
 
-## 3. Containerizare
-Imaginea de container creată
-Containerul creat pe baza imaginii
-Browserul accesând aplicația din container
-Rezultat Teste Unitare
+## 3. Containerizare (Capturi de ecran obligatorii)
+
+### Imaginea de container creată
+![Imagine](screenshots/docker_imgs.png)
+
+### Containerul creat pe baza imaginii
+![Container](screenshots/docker_ps.png)
+
+### Browserul accesând aplicația din container
+![Browser](screenshots/Home.png)
+
+### Mesaje afișate în consolă (Log-uri)
+![Logs](screenshots/docker_run.png)
+
+### Rezultatul rulării testelor cu Jenkins
+![Jenkins](screenshots/jenkins_tests.png)
+
 
 ## 4. Ghid de Rulare (Docker)
 Pentru a lansa aplicația într-un container izolat, se utilizează următoarele comenzi:
 
  Construire imagine
+
  
   docker build -t carbonara-app .
 
