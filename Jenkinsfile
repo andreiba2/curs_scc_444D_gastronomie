@@ -1,18 +1,16 @@
 pipeline {
-    agent {
-        docker { image 'python:3.9-slim' }
-    }
+    agent any
     stages {
         stage('Install') {
             steps {
-                // În interiorul imaginii de python, pip este deja instalat
-                sh 'pip install -r requirements.txt'
+                sh 'python3 -m pip install -r requirements.txt'
             }
         }
         stage('Unit Tests') {
             steps {
-                sh 'pytest test_gastronomie.py'
+                sh 'python3 -m pytest test_gastronomie.py'
             }
         }
     }
 }
+
