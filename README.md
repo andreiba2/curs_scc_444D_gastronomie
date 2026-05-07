@@ -34,9 +34,14 @@ Jenkins Pipeline: Configurat și funcțional în totalitate.
 
 Containerizare: Fișier Dockerfile creat, imagine construită și testată.
 
-3. Containerizare 
-![Imaginea de container creată](screenshots/docker_ss.png)
+## 3. Containerizare
+
+![Imaginea de container creata](screenshots/docker_ss.png)
+
 ![Containerul creat pe baza imaginii](screenshots/docker_ps.png)
-![Browserul accesând aplicația din container](screenshots/meniu_aplicatie.png)
-![Mesaje consolă (Log-uri apeluri)](screenshots/loguri.png)
-![Testările Jenkins](screenshots/teste_jenkins.png)
+
+![Browserul accesand aplicatia din container](screenshots/meniu_aplicatie.png)
+
+![Mesaje consola (Log-uri apeluri)](screenshots/loguri.png)
+
+![Testarile Jenkins](screenshots/teste_jenkins.png)
