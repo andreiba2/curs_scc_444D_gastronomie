@@ -1,16 +1,22 @@
 pipeline {
     agent any
 
+    environment {
+        
+        PYTHONPATH = "${env.WORKSPACE}"
+    }
+
     stages {
-        stage('Pregatire') {
+        stage('Verificare fisiere') {
             steps {
-                echo 'Incepem procesul de testare pentru aplicatia Gastronomie - Ramen...'
+                echo 'Afisam toate fisierele descarcate de Jenkins pentru a fi siguri ca folderul app este aici:'
+                sh 'ls -R'
             }
         }
         stage('Testare Unitara') {
             steps {
                 echo 'Rulam testele unitare cu Python...'
-                sh 'PYTHONPATH=. python3 -m unittest test_gastronomie.py'
+                sh 'python3 test_gastronomie.py'
             }
         }
     }
