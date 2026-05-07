@@ -9,7 +9,7 @@ class TestGastronomie(unittest.TestCase):
         self.assertIn("Guanciale", text_ingrediente())
 
     def test_preparare(self):
-        self.assertIn("emulsie", text_preparare())
+        self.assertIn("emulsia", text_preparare())
 
 if __name__ == '__main__':
     unittest.main()
