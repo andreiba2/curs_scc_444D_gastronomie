@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'pip install flask pytest pylint'
+                sh 'pip3 install flask pytest pylint'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'python -m pytest app/tests/test_cordon_bleu.py -v'
+                sh 'python3 -m pytest app/tests/test_cordon_bleu.py -v'
             }
         }
     }
