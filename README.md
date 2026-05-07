@@ -1,39 +1,64 @@
-# Proiect SCC - Cheesecake
+# Proiect Gastronomie: Cheesecake
 
-**Nume student:** Ionescu Eduard-Nicolae
-**Tema aleasă:**  Cheesecake
+**Student:** Ionescu Eduard-Nicolae  
+**Grupă:** 444D
 
-## Descriere aplicație
-Acesta este un proiect simplu realizat cu Flask. Aplicația prezintă informații despre Cheesecake și este structurată pe o pagină principală (Home) și 3 sub-pagini (Origine, Ingrediente, Preparare), având link-uri pentru a naviga ușor între ele.
+## Structură Proiect
 
-## Rutele aplicației
-Ruta de bază: `http://127.0.0.1:5000`
+```text
+.
+├── lib/
+│   └── __init__.py
+├── screenshots/            # Capturi de ecran (Docker, Jenkins, Aplicație)
+├── tests/                  # Teste unitare (pytest)
+├── Dockerfile              # Configurare Docker
+├── Jenkinsfile             # Pipeline CI/CD
+├── gastronomie.py          # Aplicația Flask
+├── requirements.txt        # Dependențe Python
+└── README.md               # Documentația proiectului
 
-* **Pagina principală:** `/` - `http://127.0.0.1:5000/`
-![Home](poza_home.png)
+1. Funcționalitate
+Am implementat o aplicație Flask  axată pe desertul Cheesecake. Interfața  conține rute pentru:
 
-* **Originea desertului:** `/origine` - `http://127.0.0.1:5000/origine`
-![Origine](poza_origine.png)
+Origine
 
-* **Ingrediente:** `/ingrediente` - `http://127.0.0.1:5000/ingrediente`
-![Ingrediente](poza_ingrediente.png)
+Ingrediente
 
-* **Preparare:** `/preparare` - `http://127.0.0.1:5000/preparare`
-![Preparare](poza_preparare.png)
+Mod de preparare
 
-## Testare cu Pytest și Pylint
-Am scris teste de tip unit test cu `pytest` pentru funcțiile care returnează textul din aplicație. De asemenea, am folosit `pylint` pentru a verifica la final calitatea codului din fișierul principal.
+![Meniu Aplicatie](screenshots/poza_home.png)
 
-**Rezultat pytest:**
-![Pytest](poza_pytest.png)
+## 2. Stadiul implementării
 
-**Rezultat pylint:**
-![Pylint](poza_pylint.png)
+* **Cod aplicație:** Finalizat.
+* **Teste unitare:** Implementate în folderul tests/ și validate local.
+* **Jenkins Pipeline:** Configurat și funcțional în totalitate.
+* **Containerizare:** Fișier Dockerfile creat, imagine construită și testată.
+
+## 3. Containerizare
+
+Am utilizat Docker pentru a asigura portabilitatea aplicației. Mai jos sunt dovezile pentru imaginea creată și containerul care rulează:
+
+![Status Docker](screenshots/poza_docker.png)
+
+Aplicația rulează în container și este expusă pe portul 5000:
+
+![Rulare in Browser](screenshots/poza_home.png)
+
+## 4. Integrare Continuă (Jenkins)
+
+Pipeline-ul declarativ din Jenkins automatizează procesul de verificare a codului și rularea testelor la fiecare push.
+
+### Build Time Trend
+Graficul de mai jos arată succesul build-urilor și stabilitatea pipeline-ului:
+
+![Jenkins Build Trend](screenshots/jenkins.png)
 
 
- 
-## Docker
-Aplicația a fost containerizată.. Imaginea se construiește cu succes, iar containerul rulează și expune portul 5000.
 
-**Vizualizare container activ:**
-![Docker ps](poza_docker.png) .
+
+
+
+
+
+
