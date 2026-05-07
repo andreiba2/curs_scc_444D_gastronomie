@@ -21,4 +21,4 @@ Aplicația a fost containerizată și testată. Dovezi:
 
 ### 5. Integrare
 - PR creat pentru integrarea în main.
-- Review-uri: [Aici pui ID-ul PR-ului de la colegul tău].
+- Review-uri: [...].
