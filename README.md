@@ -1,8 +1,3 @@
-Da, Magda, poți da paste așa, dar am făcut o mică retușare la formatare (am pus titlurile pe linii noi și am reparat blocurile de cod) ca să se vadă exact ca la Andrei când te uiți pe GitHub.
-
-Dacă dai copy-paste la varianta de mai jos în nano README.md, va ieși perfect:
-
-Markdown
 # 🍝 Proiect Gastronomie: Paste Carbonara
 
 **Student:** Năstase Maria-Magdalena  
