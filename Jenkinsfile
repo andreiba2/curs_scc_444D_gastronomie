@@ -8,10 +8,8 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
-                // Setăm PYTHONPATH chiar înainte de a rula testele
-                sh 'export PYTHONPATH=$PYTHONPATH:. && python3 -m pytest test_gastronomie.py'
+                sh 'export PYTHONPATH=${WORKSPACE} && python3 -m pytest test_gastronomie.py'
             }
         }
     }
 }
-
