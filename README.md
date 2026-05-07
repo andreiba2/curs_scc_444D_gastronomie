@@ -1,64 +1,84 @@
-# Proiect Gastronomie: Cheesecake
+# Proiect Gastronomie: [Tema Ta]
 
-**Student:** Ionescu Eduard-Nicolae  
+**Student:** Ionescu Eduard - Nicolae
 **Grupă:** 444D
+
+---
 
 ## Structură Proiect
 
-```text
-.
+```
+app/
 ├── lib/
-│   └── __init__.py
-├── screenshots/            # Capturi de ecran (Docker, Jenkins, Aplicație)
-├── tests/                  # Teste unitare (pytest)
-├── Dockerfile              # Configurare Docker
-├── Jenkinsfile             # Pipeline CI/CD
-├── gastronomie.py          # Aplicația Flask
-├── requirements.txt        # Dependențe Python
-└── README.md               # Documentația proiectului
+│   ├── __init__.py
+│   └── biblioteca_gastronomie.py  
+screenshots/
+Dockerfile
+Jenkinsfile
+LICENSE
+README.md
+gastronomie.py
+requirements.txt
+test_gastronomie.py
+```
 
-1. Funcționalitate
-Am implementat o aplicație Flask  axată pe desertul Cheesecake. Interfața  conține rute pentru:
+---
 
-Origine
+## 1. Funcționalitate
 
-Ingrediente
+Am implementat o aplicație Flask pentru tema Cheesecake. Interfața  conține rute pentru:
 
-Mod de preparare
+- **Proveniență:** 
+- **Ingrediente:** 
+- **Mod de preparare** 
 
-![Meniu Aplicatie](screenshots/poza_home.png)
+---
 
-## 2. Stadiul implementării
+## 2. Stadiul Implementării
 
-* **Cod aplicație:** Finalizat.
-* **Teste unitare:** Implementate în folderul tests/ și validate local.
-* **Jenkins Pipeline:** Configurat și funcțional în totalitate.
-* **Containerizare:** Fișier Dockerfile creat, imagine construită și testată.
+- **Cod aplicație:** Finalizat.
+- **Teste unitare:** Implementate în `test_gastronomie.py` (validate local).
+- **Jenkins Pipeline:** Configurat și funcțional în totalitate.
+- **Containerizare:** Fișier Dockerfile creat, imagine construită și testată.
+
+---
 
 ## 3. Containerizare
 
-Am utilizat Docker pentru a asigura portabilitatea aplicației. Mai jos sunt dovezile pentru imaginea creată și containerul care rulează:
+### Build imagine Docker
 
-![Status Docker](screenshots/poza_docker.png)
+![Docker Images](screenshots/poza_docker.png)
 
-Aplicația rulează în container și este expusă pe portul 5000:
+### Aplicație rulând în container
 
-![Rulare in Browser](screenshots/poza_home.png)
+![Home](screenshots/poza_home.png)
 
-## 4. Integrare Continuă (Jenkins)
+### Pagina Proveniență
 
-Pipeline-ul declarativ din Jenkins automatizează procesul de verificare a codului și rularea testelor la fiecare push.
+![Provenienta](screenshots/poza_origine.png)
 
-### Build Time Trend
-Graficul de mai jos arată succesul build-urilor și stabilitatea pipeline-ului:
+### Pagina Ingrediente
 
-![Jenkins Build Trend](screenshots/jenkins.png)
+![Ingrediente](screenshots/poza_ingrediente.png)
 
+### Pagina Mod de Preparare
 
+![Preparare](screenshots/poza_preparare.png)
 
+---
 
+## 4. Teste
 
+### Rezultat Pytest
 
+![Pytest](screenshots/rezultat_pytest.png)
 
+### Rezultat Pylint
 
+![Pylint](screenshots/rezultat_pylint.png)
 
+---
+
+## 5. Jenkins Pipeline
+
+![Jenkins](screenshots/jenkins.png)
