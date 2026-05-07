@@ -1,6 +1,5 @@
 from flask import Flask
-from lib.info_cheesecake import get_descriere, get_origine, get_ingrediente, get_preparare
-
+from app.lib.biblioteca_gastronomie import get_descriere, get_origine, get_ingrediente, get_preparare
 app = Flask(__name__)
 
 
