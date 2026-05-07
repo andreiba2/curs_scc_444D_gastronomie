@@ -6,10 +6,11 @@ pipeline {
                 sh 'pip install -r requirements.txt'
             }
         }
-        stage('Test') {
+        stage('Unit Tests') {
             steps {
                 sh 'pytest test_gastronomie.py'
             }
         }
     }
 }
+
