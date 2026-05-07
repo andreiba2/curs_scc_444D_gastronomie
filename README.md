@@ -16,7 +16,10 @@
 ├── requirements.txt                  # Dependențe
 ├── test_gastronomie.py               # Teste unitare
 └── README.md                         # Documentația
-1. Funcționalitate
+
+```
+
+## 1. Funcționalitate
 Am implementat o aplicație Flask pentru tema Gastronomie, axată pe Ramen. Interfața este interactivă și conține rute pentru:
 
 Proveniență: Detalii despre originile preparatului.
@@ -25,7 +28,7 @@ Ingrediente: Listarea componentelor principale.
 
 Mod de preparare: Descrierea procesului de gătire.
 
-2. Stadiul implementării
+## 2. Stadiul implementării
 Cod aplicație: Finalizat.
 
 Teste unitare: Implementate în test_gastronomie.py (validate local).
