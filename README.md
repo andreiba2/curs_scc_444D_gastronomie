@@ -1,39 +1,84 @@
-# Proiect SCC - Cheesecake
+# Proiect Gastronomie: Cheesecake
 
-**Nume student:** Ionescu Eduard-Nicolae
-**Tema aleasă:**  Cheesecake
+**Student:** Ionescu Eduard - Nicolae
+**Grupă:** 444D
 
-## Descriere aplicație
-Acesta este un proiect simplu realizat cu Flask. Aplicația prezintă informații despre Cheesecake și este structurată pe o pagină principală (Home) și 3 sub-pagini (Origine, Ingrediente, Preparare), având link-uri pentru a naviga ușor între ele.
+---
 
-## Rutele aplicației
-Ruta de bază: `http://127.0.0.1:5000`
+## Structură Proiect
 
-* **Pagina principală:** `/` - `http://127.0.0.1:5000/`
-![Home](poza_home.png)
+```
+app/
+├── lib/
+│   ├── __init__.py
+│   └── biblioteca_gastronomie.py  
+screenshots/
+Dockerfile
+Jenkinsfile
+LICENSE
+README.md
+gastronomie.py
+requirements.txt
+test_gastronomie.py
+```
 
-* **Originea desertului:** `/origine` - `http://127.0.0.1:5000/origine`
-![Origine](poza_origine.png)
+---
 
-* **Ingrediente:** `/ingrediente` - `http://127.0.0.1:5000/ingrediente`
-![Ingrediente](poza_ingrediente.png)
+## 1. Funcționalitate
 
-* **Preparare:** `/preparare` - `http://127.0.0.1:5000/preparare`
-![Preparare](poza_preparare.png)
+Am implementat o aplicație Flask pentru tema Cheesecake. Interfața  conține rute pentru:
 
-## Testare cu Pytest și Pylint
-Am scris teste de tip unit test cu `pytest` pentru funcțiile care returnează textul din aplicație. De asemenea, am folosit `pylint` pentru a verifica la final calitatea codului din fișierul principal.
+- **Proveniență:** 
+- **Ingrediente:** 
+- **Mod de preparare** 
 
-**Rezultat pytest:**
-![Pytest](rezultat_pytest.png)
+---
 
-**Rezultat pylint:**
-![Pylint](rezultat_pylint.png)
+## 2. Stadiul Implementării
 
+- **Cod aplicație:** Finalizat.
+- **Teste unitare:** Implementate în `test_gastronomie.py` (validate local).
+- **Jenkins Pipeline:** Configurat și funcțional în totalitate.
+- **Containerizare:** Fișier Dockerfile creat, imagine construită și testată.
 
- 
-## Docker
-Aplicația a fost containerizată.. Imaginea se construiește cu succes, iar containerul rulează și expune portul 5000.
+---
 
-**Vizualizare container activ:**
-![Docker ps](poza_docker.png) .
+## 3. Containerizare
+
+### Build imagine Docker
+
+![Docker Images](screenshots/poza_docker.png)
+
+### Aplicație rulând în container
+
+![Home](screenshots/poza_home.png)
+
+### Pagina Proveniență
+
+![Provenienta](screenshots/poza_origine.png)
+
+### Pagina Ingrediente
+
+![Ingrediente](screenshots/poza_ingrediente.png)
+
+### Pagina Mod de Preparare
+
+![Preparare](screenshots/poza_preparare.png)
+
+---
+
+## 4. Teste
+
+### Rezultat Pytest
+
+![Pytest](screenshots/rezultat_pytest.png)
+
+### Rezultat Pylint
+
+![Pylint](screenshots/rezultat_pylint.png)
+
+---
+
+## 5. Jenkins Pipeline
+
+![Jenkins](screenshots/jenkins.png)
