@@ -3,14 +3,13 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'python3 -m pip install --break-system-packages -r requirements.txt'
             }
         }
         stage('Unit Tests') {
             steps {
-                sh 'pytest test_gastronomie.py'
+                sh 'python3 -m pytest test_gastronomie.py'
             }
         }
     }
 }
-
