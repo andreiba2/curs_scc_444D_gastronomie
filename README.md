@@ -1,76 +1,63 @@
+Da, Magda, poți da paste așa, dar am făcut o mică retușare la formatare (am pus titlurile pe linii noi și am reparat blocurile de cod) ca să se vadă exact ca la Andrei când te uiți pe GitHub.
+
+Dacă dai copy-paste la varianta de mai jos în nano README.md, va ieși perfect:
+
+Markdown
 # 🍝 Proiect Gastronomie: Paste Carbonara
 
-> Un proiect DevOps complet dedicat rețetei autentice de Carbonara, incluzând containerizare Docker și automatizare CI/CD.
-
-| Student | Grupă | Disciplină |
-| :--- | :---: | :--- |
-| **Năstase Maria-Magdalena** | 444D | Sisteme de Conducere a Calculatoarelor |
+**Student:** Năstase Maria-Magdalena  
+**Grupă:** 444D  
+**Disciplină:** SCC
 
 ---
 
-## 📸 Prezentare Aplicație (Interfață)
+## Structură Proiect
 
-Aplicația oferă o experiență vizuală modernă, cu un fundal tematic și o structură clară pentru a explora rețeta.
+```text
+.
+├── app/
+│   └── lib/
+│       ├── __init__.py
+│       └── biblioteca_gastronomie.py  # Logica pentru Carbonara
+├── screenshots/                      # Capturi de ecran
+├── Dockerfile                        # Configurare Docker
+├── Jenkinsfile                       # Pipeline CI/CD
+├── gastronomie.py                    # Aplicația Flask
+├── requirements.txt                  # Dependențe
+├── test_gastronomie.py               # Teste unitare
+└── README.md                         # Documentația
+1. Funcționalitate
+Am implementat o aplicație Flask pentru tema Gastronomie, axată pe rețeta de Paste Carbonara. Interfața este interactivă și conține rute pentru:
 
-<div align="center">
-  <img src="screenshots/home_page.png" alt="Interfața Principală" width="80%">
-</div>
+Proveniență: Detalii despre originile preparatului în regiunea Lazio.
 
----
+Ingrediente: Listarea componentelor principale (Guanciale, Pecorino, etc.).
 
-## 🛠️ Structură și Conținut (Tabel Cerințe)
+Mod de preparare: Descrierea procesului de gătire și a tehnicii emulsiei.
 
-Cerințele de conținut (minimum 100 de cuvinte per secțiune) au fost implementate în biblioteca din folderul `app/lib`.
+2. Stadiul implementării
+Cod aplicație: Finalizat și structurat modular.
 
-| Cerință | Status | Descriere Implementare |
-| :--- | :---: | :--- |
-| **Țara/Locul de proveniență** | ✅ | Capitol istoric despre regiunea Lazio și legătura cu Roma. |
-| **Ingrediente principale** | ✅ | Detalii despre cele 5 elemente sacre (Guanciale, Pecorino, Ouo, Piper, Paste). |
-| **Mod de preparare** | ✅ | Explicații despre tehnica emulsiei la cald și timing. |
+Teste unitare: Implementate în test_gastronomie.py (verifică integritatea textelor și rutele).
 
----
+Jenkins Pipeline: Configurat în Jenkinsfile pentru automatizarea fluxului de Build și Deploy.
 
-## 📂 Organizare Fișiere
+Containerizare: Fișier Dockerfile creat; imagine construită și testată pe portul 5000.
 
-Proiectul este organizat conform celor mai bune practici de structură pentru aplicații Flask și pipeline-uri DevOps:
+3. Ghid de Rulare (Docker)
+Pentru a lansa aplicația într-un container izolat, se utilizează următoarele comenzi:
 
--   📁 `app/lib/`: Biblioteca cu texte și logica de backend (`biblioteca_gastronomie.py`).
--   📁 `screenshots/`: Capturile de ecran care atestă funcționalitatea.
--   📄 `gastronomie.py`: Serverul Flask principal.
--   📄 `test_gastronomie.py`: Testele unitare (verifică textul și rutele).
--   📄 `Dockerfile`: Instrucțiunile de containerizare (bazat pe `python:3.9-slim`).
--   📄 `Jenkinsfile`: Pipeline-ul CI/CD pentru Jenkins.
--   📄 `requirements.txt`: Dependențele Python (Flask).
+Bash
+# Construire imagine
+docker build -t carbonara-app .
 
----
-
-## 🚀 Ghid de Rulare și DevOps
-
-Aplicația este pregătită pentru rulare izolată și automatizare.
-
-### 1. Rulare în Docker
-
-Pentru a porni aplicația într-un container, folosiți comanda:
-
-```bash
-# Build imagine și pornire container (pe portul 5000)
-docker build -t carbonara-app . && \
+# Lansare container
 docker run -d -p 5000:5000 --name container_carbonara carbonara-app
-2. Automatizare CI/CD (Jenkins)
-Pipeline-ul configurat în Jenkinsfile automatizează fluxul de lucru la fiecare commit:
+Aplicația poate fi accesată la: http://localhost:5000/gastronomie
 
-Groovy
-pipeline {
-    agent any
-    stages {
-        stage('Unit Tests') {
-            // Rulează testele înainte de build
-        }
-        stage('Docker Build') {
-            // Construiește noua imagine
-        }
-        stage('Deploy') {
-            // Repornește containerul pe portul 5000
-        }
-    }
-}
+4. Testare
+Testele automate pot fi rulate direct în containerul Docker:
+
+Bash
+docker exec -it container_carbonara python3 test_gastronomie.py
+Proiect realizat pentru disciplina SCC.
