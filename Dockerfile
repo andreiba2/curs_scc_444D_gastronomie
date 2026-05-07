@@ -3,4 +3,5 @@ WORKDIR /app
 COPY . .
 RUN pip install flask
 EXPOSE 5000
-CMD ["python", "gastronomie.py"]
+# Observă calea: app/gastronomie.py
+CMD ["python", "app/gastronomie.py"]
