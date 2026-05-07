@@ -1,58 +1,76 @@
 # 🍝 Proiect Gastronomie: Paste Carbonara
 
-**Student:** Năstase Magda  
-**Grupă:** 444D  
+> Un proiect DevOps complet dedicat rețetei autentice de Carbonara, incluzând containerizare Docker și automatizare CI/CD.
 
-Acest proiect reprezintă o aplicație web dezvoltată în **Flask** care prezintă istoria, ingredientele și modul de preparare al rețetei autentice de Carbonara. Aplicația este complet containerizată și pregătită pentru fluxuri de CI/CD.
+| Student | Grupă | Disciplină |
+| :--- | :---: | :--- |
+| **Năstase Maria-Magdalena** | 444D | Sisteme de Conducere a Calculatoarelor |
 
 ---
 
-## 📂 Structură Proiect
+## 📸 Prezentare Aplicație (Interfață)
 
-```text
-.
-├── app/
-│   └── lib/
-│       ├── __init__.py
-│       └── biblioteca_gastronomie.py  # Logica și textele (100+ cuvinte)
-├── screenshots/                      # Capturi de ecran aplicație & Docker
-├── Dockerfile                        # Configurare imagine Docker
-├── docker-compose.yml                # Configurare Docker Compose
-├── Jenkinsfile                       # Pipeline CI/CD Jenkins
-├── gastronomie.py                    # Serverul principal Flask
-├── requirements.txt                  # Dependențe (Flask)
-├── test_gastronomie.py               # Teste unitare și integrare
-└── README.md                         # Documentația proiectului
-⚙️ Stadiul Implementării
-Aplicația Flask: Finalizată. Include rute dinamice pentru /gastronomie, /provenienta, /ingrediente și /preparare.
+Aplicația oferă o experiență vizuală modernă, cu un fundal tematic și o structură clară pentru a explora rețeta.
 
-Bibliotecă Text: Implementată separat în app/lib pentru a asigura modularitatea codului.
+<div align="center">
+  <img src="screenshots/home_page.png" alt="Interfața Principală" width="80%">
+</div>
 
-Teste Unitare: Implementate în test_gastronomie.py. Verifică atât conținutul textelor, cât și răspunsul serverului (Status 200 OK).
+---
 
-Containerizare: Imagine Docker bazată pe python:3.9-slim, testată și funcțională.
+## 🛠️ Structură și Conținut (Tabel Cerințe)
 
-CI/CD: Fișier Jenkinsfile configurat pentru automatizarea etapelor de Test, Build și Deploy.
+Cerințele de conținut (minimum 100 de cuvinte per secțiune) au fost implementate în biblioteca din folderul `app/lib`.
 
-🚀 Ghid de Utilizare (Docker)
-Pentru a rula proiectul local folosind Docker, urmați pașii:
+| Cerință | Status | Descriere Implementare |
+| :--- | :---: | :--- |
+| **Țara/Locul de proveniență** | ✅ | Capitol istoric despre regiunea Lazio și legătura cu Roma. |
+| **Ingrediente principale** | ✅ | Detalii despre cele 5 elemente sacre (Guanciale, Pecorino, Ouo, Piper, Paste). |
+| **Mod de preparare** | ✅ | Explicații despre tehnica emulsiei la cald și timing. |
 
-Opțiunea 1: Docker Manual
-Bash
-# Construire imagine
-docker build -t carbonara-app .
+---
 
-# Lansare container
+## 📂 Organizare Fișiere
+
+Proiectul este organizat conform celor mai bune practici de structură pentru aplicații Flask și pipeline-uri DevOps:
+
+-   📁 `app/lib/`: Biblioteca cu texte și logica de backend (`biblioteca_gastronomie.py`).
+-   📁 `screenshots/`: Capturile de ecran care atestă funcționalitatea.
+-   📄 `gastronomie.py`: Serverul Flask principal.
+-   📄 `test_gastronomie.py`: Testele unitare (verifică textul și rutele).
+-   📄 `Dockerfile`: Instrucțiunile de containerizare (bazat pe `python:3.9-slim`).
+-   📄 `Jenkinsfile`: Pipeline-ul CI/CD pentru Jenkins.
+-   📄 `requirements.txt`: Dependențele Python (Flask).
+
+---
+
+## 🚀 Ghid de Rulare și DevOps
+
+Aplicația este pregătită pentru rulare izolată și automatizare.
+
+### 1. Rulare în Docker
+
+Pentru a porni aplicația într-un container, folosiți comanda:
+
+```bash
+# Build imagine și pornire container (pe portul 5000)
+docker build -t carbonara-app . && \
 docker run -d -p 5000:5000 --name container_carbonara carbonara-app
-Opțiunea 2: Docker Compose (Recomandat)
-Bash
-docker-compose up -d --build
-Notă: Aplicația poate fi accesată la adresa: http://localhost:5000/gastronomie
+2. Automatizare CI/CD (Jenkins)
+Pipeline-ul configurat în Jenkinsfile automatizează fluxul de lucru la fiecare commit:
 
-✅ Testare Automată
-Pentru a rula suita de teste direct în mediul de execuție Docker, folosiți comanda:
-
-Bash
-docker exec -it container_carbonara python3 test_gastronomie.py
-📸 Screenshots
-Toate capturile de ecran care atestă funcționalitatea aplicației, trecerea testelor și statusul containerelor Docker se regăsesc în folderul /screenshots.
+Groovy
+pipeline {
+    agent any
+    stages {
+        stage('Unit Tests') {
+            // Rulează testele înainte de build
+        }
+        stage('Docker Build') {
+            // Construiește noua imagine
+        }
+        stage('Deploy') {
+            // Repornește containerul pe portul 5000
+        }
+    }
+}
