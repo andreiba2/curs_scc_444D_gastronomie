@@ -8,7 +8,8 @@ app = Flask(__name__)
 def tema_gastronomie():
     return '''
     <h1>Tema proiectului: Gastronomie</h1>
-    <h2>Meniu Interactiv - Ramen</h2>
+    <h2>Ramen</h2>
+    <h3>Student: Curca Andrei-Daniel Grupa: 444D</h3>
     <ul>
         <li><a href="/ramen/provenienta">1. Tara/locul de provenienta</a></li>
         <li><a href="/ramen/ingrediente">2. Ingrediente principale</a></li>
