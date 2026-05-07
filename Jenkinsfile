@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        PYTHONPATH = "."
-    }
     stages {
         stage('Install') {
             steps {
@@ -11,8 +8,10 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
-                sh 'python3 -m pytest test_gastronomie.py'
+                // Setăm PYTHONPATH chiar înainte de a rula testele
+                sh 'export PYTHONPATH=$PYTHONPATH:. && python3 -m pytest test_gastronomie.py'
             }
         }
     }
 }
+
