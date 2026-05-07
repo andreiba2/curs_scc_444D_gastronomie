@@ -1,25 +1,47 @@
 from flask import Flask
-from app.lib.biblioteca_gastronomie import ingrediente_ramen, descriere_ramen
+from app.lib.biblioteca_gastronomie import provenienta_ramen, ingrediente_ramen, preparare_ramen
 
 app = Flask(__name__)
 
+@app.route('/')
 @app.route('/gastronomie')
 def tema_gastronomie():
-    return "Tema proiectului este: Gastronomie"
+    return '''
+    <h1>Tema proiectului: Gastronomie</h1>
+    <h2>Meniu Interactiv - Ramen</h2>
+    <ul>
+        <li><a href="/ramen/provenienta">1. Tara/locul de provenienta</a></li>
+        <li><a href="/ramen/ingrediente">2. Ingrediente principale</a></li>
+        <li><a href="/ramen/preparare">3. Modul de preparare</a></li>
+    </ul>
+    '''
 
-
-@app.route('/ramen')
-def element_ramen():
-    return "Elementul ales este: Ramen"
-
+@app.route('/ramen/provenienta')
+def afisare_provenienta():
+    rezultat = provenienta_ramen()
+    return f'''
+    <h2>Tara/locul de provenienta:</h2>
+    <p>{rezultat}</p>
+    <br><a href="/gastronomie">⬅️ Inapoi la meniul principal</a>
+    '''
 
 @app.route('/ramen/ingrediente')
 def afisare_ingrediente():
-    return ingrediente_ramen()
+    rezultat = ingrediente_ramen()
+    return f'''
+    <h2>Ingrediente principale:</h2>
+    <p>{rezultat}</p>
+    <br><a href="/gastronomie">⬅️ Inapoi la meniul principal</a>
+    '''
 
-@app.route('/ramen/descriere')
-def afisare_descriere():
-    return descriere_ramen()
+@app.route('/ramen/preparare')
+def afisare_preparare():
+    rezultat = preparare_ramen()
+    return f'''
+    <h2>Modul de preparare:</h2>
+    <p>{rezultat}</p>
+    <br><a href="/gastronomie">⬅️ Inapoi la meniul principal</a>
+    '''
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
