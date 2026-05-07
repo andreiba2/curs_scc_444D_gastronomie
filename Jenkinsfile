@@ -10,9 +10,8 @@ pipeline {
         stage('Testare Unitara') {
             steps {
                 echo 'Rulam testele unitare cu Python...'
-                sh 'python3 test_gastronomie.py'
+                sh 'PYTHONPATH=. python3 -m unittest test_gastronomie.py'
             }
         }
     }
 }
-
