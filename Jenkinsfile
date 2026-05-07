@@ -3,11 +3,13 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'python3 -m pip install -r requirements.txt'
+                // Adăugăm flag-ul pentru a permite instalarea în mediul gestionat extern
+                sh 'python3 -m pip install --break-system-packages -r requirements.txt'
             }
         }
         stage('Unit Tests') {
             steps {
+                // Rulăm testele unitare conform cerințelor [cite: 61, 163]
                 sh 'python3 -m pytest test_gastronomie.py'
             }
         }
