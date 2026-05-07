@@ -22,7 +22,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'python3 -m pytest app/tests/test_cordon_bleu.py -v'
+                sh 'PYTHONPATH=$(pwd) python3 -m pytest app/tests/test_cordon_bleu.py -v'
             }
         }
     }
