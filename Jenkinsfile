@@ -2,9 +2,15 @@ pipeline {
     agent any
 
     stages {
+        stage('Install Python') {
+            steps {
+                sh 'apt-get update && apt-get install -y python3 python3-pip'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
-                sh 'pip3 install flask pytest pylint'
+                sh 'pip3 install flask pytest pylint --break-system-packages'
             }
         }
 
