@@ -1,4 +1,4 @@
-# Proiect Gastronomie: [Tema Ta]
+# Proiect Gastronomie: Cheesecake
 
 **Student:** Ionescu Eduard - Nicolae
 **Grupă:** 444D
