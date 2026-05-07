@@ -8,18 +8,20 @@
 
 ## Structură Proiect
 
+```text
 .
 ├── app/
 │   └── lib/
-│       ├── __init__.py
-│       └── biblioteca_gastronomie.py
-├── screenshots/
-├── Dockerfile
-├── Jenkinsfile
-├── gastronomie.py
-├── requirements.txt
-├── test_gastronomie.py
-└── README.md
+│       ├── __init__.py                # Inițializare modul bibliotecă
+│       └── biblioteca_gastronomie.py  # Conținut text (istorie, ingrediente, preparare)
+├── screenshots/                       # Capturi de ecran (Interfață, Docker, Teste)
+├── Dockerfile                         # Configurare imagine Docker
+├── Jenkinsfile                        # Pipeline CI/CD pentru automatizare
+├── gastronomie.py                     # Aplicația principală Flask
+├── requirements.txt                   # Dependențe Python (Flask)
+├── test_gastronomie.py                # Teste unitare pentru validare
+└── README.md                          # Documentația proiectului
+
 
 ## 1. Funcționalitate
 
