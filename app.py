@@ -1,5 +1,5 @@
 from flask import Flask
-from app.lib.lib_gastronomie import ingrediente, provenienta, preparare, descriere
+from app.lib.lib_gastronomie import descriere, ingrediente, preparare, provenienta
 
 app = Flask(__name__)
 
