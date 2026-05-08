@@ -1,5 +1,5 @@
 from flask import Flask
-from app.lib.lib_gastronomie import descriere, ingrediente, preparare, provenienta
+from app.lib.lib_gastronomie import ingrediente, provenienta, preparare, descriere
 
 app = Flask(__name__)
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 def tema_gastronomie():
     return '''
         <h1>Tema proiectului: Gastronomie</h1>
-        <h2><a>Lava Cake</a></h2>
+        <h2><a href="/lava-cake">Lava Cake</a></h2>
     '''
 
 @app.route('/lava-cake')
