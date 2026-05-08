@@ -5,10 +5,11 @@
 * **Testare:** Fișier Jenkins configurat. Testele unitare (pytest) trec cu succes la testarea manuală și executate prin Jenkins.
 * **Integrare:** PR deschis din `dev_Olteanu_Rares` către `main_Olteanu_Rares` (cu rezultate teste atașate). Aștept review pentru PR-ul către ramura `main` pentru README.
 * **Containerizare:** Imagine creată și testată local.
-  <!-- * [Adaugă Captură 1: Imagine container creată]
-  * [Adaugă Captură 2: Container creat]
-  * [Adaugă Captură 3: Browser care accesează aplicația]
-  * [Adaugă Captură 4: Mesaje consolă (atestă accesarea)] -->
+  * [Captură 1: Imagine container creată](images/Code_-_DockerContainerImage.png)
+  * [Captură 2: Container creat](images/Code_-_DockerConainerID.png)
+  * [Captură 3: Browser care accesează aplicația](images/VirtualBoxVM_Flask.png)
+  * [Captură 4: Mesaje consolă](images/Code_-_DockerLogs.png)
+* **Testare / Jenkins:** [Captură 5: Rulare pipeline Jenkins](images/VirtualBoxVM_Jenkinsfile.png)
 * **Pull Requests la care am făcut review:** #ID_PR
 * **Fișierul README.md:** Actualizat conform cerințelor.
 * **Ce mai este de făcut:** Integrarea finală pe branch-ul `main` a fișierului comun.
