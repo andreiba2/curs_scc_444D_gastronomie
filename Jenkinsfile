@@ -3,12 +3,19 @@ pipeline {
     stages {
         stage('Instalare Dependențe') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh '''
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install -r requirements.txt
+                '''
             }
         }
         stage('Execuție Teste') {
             steps {
-                sh 'pytest tests/'
+                sh '''
+                . venv/bin/activate
+                pytest tests/
+                '''
             }
         }
     }
