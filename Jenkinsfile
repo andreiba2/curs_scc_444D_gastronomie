@@ -10,11 +10,11 @@ pipeline {
                 '''
             }
         }
-        stage('Rulare aplicație') {
+        stage('Testare aplicație') {
             steps {
                 sh '''
-                . venv/bin/activate
-                python3 app.py
+                    . venv/bin/activate
+                    python3 test_gastronomie.py
                 '''
             }
         }
