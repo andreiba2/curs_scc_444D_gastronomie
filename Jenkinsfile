@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh '''
                 . venv/bin/activate
-                pytest tests/
+                python3 -m pytest tests/
                 '''
             }
         }
