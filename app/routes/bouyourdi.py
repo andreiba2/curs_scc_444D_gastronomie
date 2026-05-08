@@ -1,5 +1,5 @@
 from flask import Blueprint
-from curs_scc_444D_gastronomie.app.lib.biblioteca_gastronomie import ingrediente_bouyourdi, descriere_bouyourdi
+from app.lib.biblioteca_gastronomie import ingrediente_bouyourdi, descriere_bouyourdi
 
 bouyourdi_bp = Blueprint('bouyourdi', __name__)
 

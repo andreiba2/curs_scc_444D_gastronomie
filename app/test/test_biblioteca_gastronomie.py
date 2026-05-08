@@ -1,5 +1,5 @@
 import unittest
-from curs_scc_444D_gastronomie.app.lib.biblioteca_gastronomie import ingrediente_bouyourdi, descriere_bouyourdi
+from app.lib.biblioteca_gastronomie import ingrediente_bouyourdi, descriere_bouyourdi
 
 class TestBouyourdi(unittest.TestCase):
     def test_ingrediente(self):

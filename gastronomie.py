@@ -1,5 +1,5 @@
 from flask import Flask
-from curs_scc_444D_gastronomie.app.routes.bouyourdi import bouyourdi_bp
+from app.routes.bouyourdi import bouyourdi_bp
 
 app = Flask(__name__)
 app.register_blueprint(bouyourdi_bp)
