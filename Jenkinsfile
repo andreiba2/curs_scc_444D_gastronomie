@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Testare Piftie') {
             steps {
-                sh 'pytest test_piftie.py'
+                sh 'PYTHONPATH=. pytest test_piftie.py'
             }
         }
     }
