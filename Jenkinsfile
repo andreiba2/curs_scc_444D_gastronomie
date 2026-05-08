@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Testare Piftie') {
             steps {
-                sh 'python3 -m pytest test_piftie.py'
+                sh "export PYTHONPATH=${WORKSPACE} && python3 -m pytest test_piftie.py"
             }
         }
     }
