@@ -16,16 +16,19 @@
 | `/cordon_bleu/descriere` | Descrierea preparatului |
 | `/cordon_bleu/origine` | Originea preparatului |
 
-## Screenshot-uri
+## Screenshot-uri aplicație
 
-### Docker - Container pornit
-![Docker](img/Screenshot_from_2026-05-07_22-34-31.png)
+### Pagina principală Gastronomie
+![Gastronomie](img/Screenshot_from_2026-05-10_00-32-34.png)
 
-### Browser - Aplicatie rulând
-![Browser 1](img/Screenshot_from_2026-05-07_22-35-38.png)
-![Browser 2](img/Screenshot_from_2026-05-07_22-35-59.png)
-![Browser 3](img/Screenshot_from_2026-05-07_22-36-32.png)
-![Browser 4](img/Screenshot_from_2026-05-07_22-36-45.png)
+### Pagina Cordon Bleu
+![Cordon Bleu](img/Screenshot_from_2026-05-10_00-33-04.png)
 
-### Jenkins - Teste trecute
-![Jenkins](img/Screenshot_from_2026-05-07_23-12-32.png)
+### Pagina Descriere
+![Descriere](img/Screenshot_from_2026-05-10_00-33-13.png)
+
+### Pagina Origine
+![Origine](img/Screenshot_from_2026-05-10_00-33-22.png)
+
+## Screenshot Jenkins - Teste trecute
+![Jenkins](img/Screenshot_from_2026-05-10_00-47-19.png)
