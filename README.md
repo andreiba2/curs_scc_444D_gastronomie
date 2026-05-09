@@ -36,9 +36,20 @@
 ![Screenshot](screenshots/Imagine_docker.png)
 - Containerul creat 
 ![Screenshot](screenshots/container.png)
-- Log-urile containerului arată că serverul Flask rulează pe `0.0.0.0:5000`
+- Mesaje afișate în consolă (Log-uri)
 ![Screenshot](screenshots/mesaje_consola.png)
 - Acces din browser: Pagina Principală
 ![Screenshot](screenshots/interfata.png)
 - Testele executate folosind Jenkins
 ![Screenshot](screenshots/testare_jetkins.png)
+
+---
+
+## 5)  Rulare (Docker)
+
+Construire imagine
+docker build -t clatite-app .
+
+Lansare container
+docker run -d -p 5050:5000 --name clatite_container clatite-app
+
