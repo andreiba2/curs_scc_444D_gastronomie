@@ -23,7 +23,16 @@ pipeline {
 
         stage('Run tests') {
             steps {
-                sh '.venv/bin/python -m pytest app/tests -q'
+                sh '''
+                    PYTHONPATH=. .venv/bin/python -m app.tests.tests_app
+                    PYTHONPATH=. .venv/bin/python -m app.tests.tests_libs
+                '''
+            }
+        }
+
+        stage('Docker build') {
+            steps {
+                sh 'docker build -t tortilla-app .'
             }
         }
     }
