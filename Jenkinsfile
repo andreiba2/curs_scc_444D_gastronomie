@@ -16,15 +16,15 @@ pipeline {
 
         stage('Verificare Cod') {
             steps {
-                // Rulează analiza codului, dar nu oprește build-ul dacă sunt erori mici
-                sh 'pylint --break-system-packages gastronomie.py || true'
+                // Verifica functionalitatea intregii aplicatii
+                sh 'pylint --break-system-packages gastronomie.py'
             }
         }
 
         stage('Teste') {
             steps {
                 // Rulează testele unitare
-                sh 'pytest --break-system-packages tests/ || true'
+                sh 'pytest --break-system-packages tests/'
             }
         }
     }
