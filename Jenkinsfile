@@ -1,61 +1,37 @@
 pipeline {
     agent any
-
+    
     stages {
 
-        stage('Checkout') {
+        stage("Environment Setup") {
             steps {
-                checkout scm
-            }
-        }
-
-        stage('Install') {
-            steps {
-                sh '''
+                echo "Creating virtual environment and installing dependencies"
+                sh """
                     python3 -m venv venv
                     . venv/bin/activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
-                '''
+                """
             }
         }
-
-        stage('Run tests') {
+        
+        stage("Run Unit Tests") {
             steps {
-                sh '''
+                echo "Running tests using pytest"
+                sh """
                     . venv/bin/activate
-                    export PYTHONPATH=$PYTHONPATH:$(pwd)
-                    pytest -v
-                '''
+                    PYTHONPATH=. pytest --maxfail=1 --disable-warnings -q
+                """
             }
         }
-
-        stage('Build Docker image') {
-            steps {
-                sh '''
-                    docker build -t clatite-app .
-                '''
-            }
+    }
+    
+    post {
+        success {
+            echo "All tests passed! 🎉"
         }
-
-        stage('Run Docker container') {
-            steps {
-                sh '''
-                
-                    docker run -d --name clatite_americane_clean-$BUILD_NUMBER -p 5050:5000 clatite-app
-
-                    sleep 5
-                    docker logs clatite_americane_clean-$BUILD_NUMBER
-                '''
-            }
-        }
-
-        stage('Cleanup') {
-            steps {
-                sh '''
-                    docker rm -f clatite_americane_clean-$BUILD_NUMBER || true
-                '''
-            }
+        failure {
+            echo "Tests failed ❌"
         }
     }
 }
