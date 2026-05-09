@@ -102,9 +102,9 @@ Pipeline Jenkins:
 
 ![Creare folder](screenshots/creare_folder_proiect.png)
 
-### Creat + clone + venv
+### Clone + venv
 
-![Clone si venv](screenshots/creat_clone_venv.png)
+![Clone si venv](screenshots/clone_venv.png)
 
 ### Instalare pachete
 
