@@ -1,47 +1,38 @@
 🍽️ Proiect Gastronomie – Clătite Americane
-## 1. Funcționalitate
-Am implementat o aplicație Flask pentru tema Gastronomie, axată pe rețeta de Clătite Americane. Interfața include:
+---
 
-- Proveniență  
-- Ingrediente  
-- Mod de preparare  
-- Pagina principală stilizată cu imagine și butoane  
-- Rute simple necesare pentru testele automate
+## 1) Funcționalitate
+- Funcții implementate în `app/lib/biblioteca_gastronomie.py`:
+  - [ingrediente_clatite](ca://s?q=Arata_functia_ingrediente_clatite) — returnează lista ingredientelor necesare pentru preparat.
+  - [descriere_clatite](ca://s?q=Arata_functia_descriere_clatite) — oferă o scurtă prezentare a clătitelor americane.
+- Rute Flask implementate în `clatite.py`:
+  - `/gastronomie` — pagina principală a temei gastronomice
+  - `/origine` — prezintă originea clătitelor americane
+  - `/ingrediente` — afișează ingredientele folosite
+  - `/preparare` — descrie pașii de preparare
+- Interfață: design simplu, culori calde și o imagine reprezentativă cu clătite americane.
 
 ---
 
-## 2. Stadiul implementării
-- Cod aplicație: finalizat și structurat modular  
-- Rute stilizate + rute simple implementate complet  
-- Teste unitare: 11 passed  
-- Jenkins Pipeline: configurat și funcțional  
-- README actualizat conform cerințelor
+## 2) Stadiul implementării
+- Codul complet este disponibil în branch-ul de dezvoltare `dev_Nitu_Alexandra`.
 
 ---
 
-## 3. Testare
-- Testare manuală: toate rutele funcționale  
-- Testare automată: pytest rulează cu succes  
-- Jenkins execută testele și containerul fără erori
+## 3) Testare
+- Framework utilizat: **pytest**
+- Locație teste: folderul `tests/`
+- Status: **Toate testele au trecut cu succes** în pipeline-ul Jenkins.
 
 ---
 
-## 4. Integrare
-- Branch de lucru: dev_Nitu_Alexandra  
-- PR deschis către main_Nitu_Alexandra  
-- Include rezultate teste + loguri Jenkins  
-- În așteptare de review pentru integrarea finală
+## 4) Integrare
+- Pull Request deschis din `dev_Nitu_Alexandra` către `main_Nitu_Alexandra`.
 
 ---
 
-## 5. Containerizare
-- Fișier Dockerfile creat  
-- Imagine Docker construită și testată local  
-- Containerul rulează corect pe portul 5000  
-- Pagina principală accesibilă la /gastronomie  
-
-Containerul rulează corect pe portul 5000
-
-Pagina principală accesibilă la:
-/gastronomie – interfața stilizată
-/ – ruta simplă pentru testele automate
+## 5) CI/CD
+- Pipeline configurat în Jenkins pentru:
+  - instalarea dependențelor
+  - rularea testelor automate
+- Rezultat final: **Build reușit**, toate testele verzi.
