@@ -1,16 +1,29 @@
 pipeline {
-    agent {
-        dockerfile { filename 'Dockerfile' }
-    }
+    agent any
+
     stages {
-        stage('Install dependencies') {
+        stage('Create virtual environment') {
             steps {
-                sh 'pip install -r requirement.txt'
+                sh 'python3 -m venv .venv'
             }
         }
+
+        stage('Install dependencies') {
+            steps {
+                sh '''
+                    . .venv/bin/activate
+                    python -m pip install --upgrade pip
+                    python -m pip install -r requirements.txt
+                '''
+            }
+        }
+
         stage('Run tests') {
             steps {
-                sh 'PYTHONPATH=. python -m unittest discover -s app/test'
+                sh '''
+                    . .venv/bin/activate
+                    python -m pytest app/tests -q
+                '''
             }
         }
     }
