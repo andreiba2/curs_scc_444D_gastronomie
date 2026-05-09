@@ -22,8 +22,15 @@ pipeline {
             steps {
                 sh '''
                     . .venv/bin/activate
-                    python -m pytest app/tests -q
+                    python -m app.tests.tests_app
+                    python -m app.tests.tests_libs
                 '''
+            }
+        }
+
+        stage('Docker build') {
+            steps {
+                sh 'docker build -t tortilla-app .'
             }
         }
     }
