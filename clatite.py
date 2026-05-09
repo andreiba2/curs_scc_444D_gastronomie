@@ -58,11 +58,11 @@ STYLE = """
 def page(content):
     return STYLE + f"<div class='card'>{content}</div>"
 
-@app.route('/')
-def index():
-    return "<script>window.location.href='/gastronomie';</script>"
+# ---------------------------------------------------------
+# RUTELE STILIZATE
+# ---------------------------------------------------------
 
-@app.route("/gastronomie")
+@app.route('/gastronomie')
 def gastronomie():
     image_url = url_for('static', filename='clatite.jpg')
     return page(f"""
@@ -78,12 +78,17 @@ def gastronomie():
         </div>
     """)
 
+# Ruta cerută de Jenkins → /clatite
+@app.route('/clatite')
+def redirect_clatite():
+    return gastronomie()
+
 @app.route('/clatite/preparare')
 def preparare():
     return page(f"""
         <h1>Preparare</h1>
         <p class='text'>{text_preparare()}</p>
-        <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
+        <a class='btn btn-inchis' href='/clatite'>Înapoi</a>
     """)
 
 @app.route('/clatite/origine')
@@ -91,7 +96,7 @@ def origine():
     return page(f"""
         <h1>Origine</h1>
         <p class='text'>{text_provenienta()}</p>
-        <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
+        <a class='btn btn-inchis' href='/clatite'>Înapoi</a>
     """)
 
 @app.route('/clatite/ingrediente')
@@ -99,8 +104,34 @@ def ingrediente():
     return page(f"""
         <h1>Ingrediente</h1>
         <p class='text'>{text_ingrediente()}</p>
-        <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
+        <a class='btn btn-inchis' href='/clatite'>Înapoi</a>
     """)
+
+# ---------------------------------------------------------
+# RUTE SIMPLE PENTRU TESTE
+# ---------------------------------------------------------
+
+@app.route("/")
+def home_simplu():
+    return """
+    Tema: Clatite americane
+    <br><br>
+    <a href='/clatite'>Intră în pagina principală</a>
+    """
+
+@app.route("/clatite_americane")
+def element_simplu():
+    return "Element ales: Clatite americane"
+
+@app.route("/clatite_americane/ingrediente")
+def ingrediente_simplu():
+    return f"Ingrediente: {text_ingrediente()}"
+
+@app.route("/clatite_americane/descriere")
+def descriere_simplu():
+    return f"Descriere: {text_preparare()}"
+
+# ---------------------------------------------------------
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

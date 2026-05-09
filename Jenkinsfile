@@ -26,7 +26,6 @@ pipeline {
                     . venv/bin/activate
                     export PYTHONPATH=$PYTHONPATH:$(pwd)
                     pytest -v
-
                 '''
             }
         }
@@ -42,9 +41,9 @@ pipeline {
         stage('Run Docker container') {
             steps {
                 sh '''
-                    docker run -d --name clatite-container -p 5000:5000 clatite-app
+                    docker run -d --name clatite_americane-$BUILD_NUMBER -p 5050:5000 clatite-app
                     sleep 5
-                    docker logs clatite-container
+                    docker logs clatite_americane-$BUILD_NUMBER
                 '''
             }
         }
@@ -52,8 +51,7 @@ pipeline {
         stage('Cleanup') {
             steps {
                 sh '''
-                    docker stop clatite-container || true
-                    docker rm clatite-container || true
+                    docker rm -f clatite_americane-$BUILD_NUMBER || true
                 '''
             }
         }
