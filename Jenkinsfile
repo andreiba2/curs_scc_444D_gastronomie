@@ -17,7 +17,19 @@ pipeline {
         
         stage('Instalare dependinte') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh '''
+                    # Create a virtual environment
+                    python3 -m venv .venv
+
+                    # Activate it
+                    source .venv/bin/activate
+
+                    # Upgrade pip
+                    pip install --upgrade pip
+
+                    # Install dependencies
+                    pip install -r requirements.txt
+                '''
                 echo'Dependente descarcate cu succes!'
             }
         }
