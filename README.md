@@ -34,8 +34,8 @@ Funcționalitate pentru elementul **Pizza**:
 | Containerizare | ✅ Realizată |
 | Documentație | ✅ Completă |
 | PR creat | ✅ PR #40 |
-| Review primit | ⏳ În așteptare |
-| Integrat în main | ⏳ În așteptare |
+| Review primit | ✅ Primit |
+| Integrat în main | ✅ Integrat în main_Simonescu_Matei |
 
 ---
 
@@ -54,6 +54,7 @@ python3 -m pytest tests/test_pizza.py -v
 ```
 
 **Rezultat: 10/10 PASSED ✅**
+![Teste pytest](jenkins.png)
 
 ### Testare cu Jenkins
 Jenkinsfile configurat în branch-ul de dezvoltare.
@@ -69,18 +70,16 @@ docker run -p 5000:5000 gastronomie-pizza
 
 Aplicația rulează în container și poate fi accesată la `http://localhost:5000/pizza`.
 
+### Imagine Docker creată
+![Docker images](docker_images.png)
+
+### Container creat
+![Docker ps](docker_ps.png)
+
+### Browser - aplicație în container
+![Browser pizza](localhost_principal.png)
+
+### Consolă container
+![Consola](GET_pizza.png)
+
 ---
-
-## Pull Request-uri la care am făcut review
-
-| PR ID | Autor | Descriere |
-|-------|-------|-----------|
-| - | - | În așteptare |
-
----
-
-## Ce mai este de făcut
-
-- [ ] Review de la coleg pentru PR #40
-- [ ] Merge în main_Simonescu_Matei
-- [ ] Integrat README.md în branch-ul main al grupei
