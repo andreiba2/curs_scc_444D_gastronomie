@@ -1,10 +1,20 @@
+"""
+Modul principal Flask pentru aplicația Gastronomie - Cheesecake.
+"""
 from flask import Flask
-from app.lib.biblioteca_gastronomie import get_descriere, get_origine, get_ingrediente, get_preparare
+from app.lib.biblioteca_gastronomie import (
+    get_descriere,
+    get_origine,
+    get_ingrediente,
+    get_preparare
+)
+
 app = Flask(__name__)
 
 
 @app.route('/')
 def home():
+    """Ruta principală care afișează pagina de start cu meniul aplicației."""
     return f"""
     <html>
         <body>
@@ -23,6 +33,7 @@ def home():
 
 @app.route('/origine')
 def origine():
+    """Ruta care afișează informații despre originea preparatului."""
     return f"""
     <html>
         <body>
@@ -37,6 +48,7 @@ def origine():
 
 @app.route('/ingrediente')
 def ingrediente():
+    """Ruta care afișează lista de ingrediente ale preparatului."""
     return f"""
     <html>
         <body>
@@ -51,6 +63,7 @@ def ingrediente():
 
 @app.route('/preparare')
 def preparare():
+    """Ruta care afișează pașii pentru modul de preparare."""
     return f"""
     <html>
         <body>
@@ -62,5 +75,7 @@ def preparare():
     </html>
     """
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
