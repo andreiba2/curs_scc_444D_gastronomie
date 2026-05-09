@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for
 from app.lib.biblioteca_gastronomie import text_provenienta, text_ingrediente, text_preparare
 
 app = Flask(__name__)
@@ -7,23 +7,23 @@ STYLE = """
 <style>
     body {
         font-family: Arial, sans-serif;
-        background: #fff8e7; /* crem deschis */
+        background: #fff8e7;
         margin: 0;
         padding: 0;
         text-align: center;
     }
     .card {
-        background: #fffdf8; /* crem cald */
+        background: #fffdf8;
         max-width: 750px;
         margin: 60px auto;
         padding: 40px;
         border-radius: 20px;
-        border: 2px solid #f3d9a4; /* miere deschisă */
+        border: 2px solid #f3d9a4;
         box-shadow: 0 4px 20px rgba(180, 140, 80, 0.2);
     }
     h1 {
         margin-bottom: 15px;
-        color: #c68b3f; /* caramel */
+        color: #c68b3f;
         font-size: 2.8em;
         text-shadow: 1px 1px 0 #fff;
     }
@@ -62,20 +62,26 @@ def page(content):
 def index():
     return "<script>window.location.href='/gastronomie';</script>"
 
-@app.route('/gastronomie')
+@app.route("/gastronomie")
 def gastronomie():
+    image_url = url_for('static', filename='clatite.jpg')
     return page(f"""
         <h1>Clătite Americane</h1>
-        <p class='text'>Desert pufos, dulce, cu aromă de miere și sirop de arțar.</p>
-        <a class='btn btn-miere' href='/clatite/preparare'>Preparare</a>
-        <a class='btn btn-crem' href='/clatite/origine'>Origine</a>
-        <a class='btn btn-auriu' href='/clatite/ingrediente'>Ingrediente</a>
+
+        <img src="{image_url}" alt="Clătite Americane"
+             style="width:350px; border-radius:15px; margin:20px 0;">
+
+        <div style="margin-top:25px;">
+            <a class='btn btn-miere' href='/clatite/preparare'>Preparare</a>
+            <a class='btn btn-crem' href='/clatite/ingrediente'>Ingrediente</a>
+            <a class='btn btn-auriu' href='/clatite/origine'>Origine</a>
+        </div>
     """)
 
 @app.route('/clatite/preparare')
 def preparare():
     return page(f"""
-        <h1 style='color:#c68b3f;'>Preparare</h1>
+        <h1>Preparare</h1>
         <p class='text'>{text_preparare()}</p>
         <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
     """)
@@ -83,7 +89,7 @@ def preparare():
 @app.route('/clatite/origine')
 def origine():
     return page(f"""
-        <h1 style='color:#d49a54;'>Origine</h1>
+        <h1>Origine</h1>
         <p class='text'>{text_provenienta()}</p>
         <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
     """)
@@ -91,7 +97,7 @@ def origine():
 @app.route('/clatite/ingrediente')
 def ingrediente():
     return page(f"""
-        <h1 style='color:#f1b24a;'>Ingrediente</h1>
+        <h1>Ingrediente</h1>
         <p class='text'>{text_ingrediente()}</p>
         <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
     """)
