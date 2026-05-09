@@ -20,7 +20,10 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'pytest tests/'
+                sh '''
+                . venv/bin/activate
+                python3 -m pytest tests/
+                '''
             }
         }
     }
