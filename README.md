@@ -30,8 +30,8 @@
 - [adauga screenshot cu rezultatul Jenkins]
 
 ## Containerizare
-- [adauga screenshot cu `docker images`]
-- [adauga screenshot cu `docker ps`]
+<img width="1641" height="921" alt="image" src="https://github.com/user-attachments/assets/2642d0d0-528d-4b20-844f-81ea51958cd8" />
+
 - [adauga screenshot cu browserul la http://localhost:5000/]
 - [adauga screenshot cu consolă container]
 
