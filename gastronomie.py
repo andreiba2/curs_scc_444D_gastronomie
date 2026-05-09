@@ -1,5 +1,9 @@
 from flask import Flask, url_for
-from app.lib.biblioteca_gastronomie import text_provenienta, text_ingrediente, text_preparare
+from app.lib.biblioteca_gastronomie import (
+    text_provenienta,
+    text_ingrediente,
+    text_preparare
+)
 
 app = Flask(__name__)
 
@@ -58,10 +62,6 @@ STYLE = """
 def page(content):
     return STYLE + f"<div class='card'>{content}</div>"
 
-# ---------------------------------------------------------
-# RUTELE STILIZATE
-# ---------------------------------------------------------
-
 @app.route('/gastronomie')
 def gastronomie():
     image_url = url_for('static', filename='clatite.jpg')
@@ -78,7 +78,6 @@ def gastronomie():
         </div>
     """)
 
-# Ruta cerută de Jenkins → /clatite
 @app.route('/clatite')
 def redirect_clatite():
     return gastronomie()
@@ -107,10 +106,6 @@ def ingrediente():
         <a class='btn btn-inchis' href='/clatite'>Înapoi</a>
     """)
 
-# ---------------------------------------------------------
-# RUTE SIMPLE PENTRU TESTE
-# ---------------------------------------------------------
-
 @app.route("/")
 def home_simplu():
     return """
@@ -129,9 +124,11 @@ def ingrediente_simplu():
 
 @app.route("/clatite_americane/descriere")
 def descriere_simplu():
-    return f"Descriere: {text_preparare()}"
+    return f"Descriere: {text_provenienta()}"
 
-# ---------------------------------------------------------
+@app.route("/clatite_americane/preparare")
+def preparare_simplu():
+    return f"Preparare: {text_preparare()}"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

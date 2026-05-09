@@ -16,4 +16,4 @@ USER appuser
 
 EXPOSE 5000
 
-CMD ["python", "clatite.py"]
+CMD ["python", "gastronomie.py"]
