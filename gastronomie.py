@@ -26,7 +26,7 @@ def tema_gastronomie():
 def chilli_con_carne():
     return '''
     <h2>Element ales: Chilli con carne</h2>
-    <br><a href="/gastronomie">⬅️ Inapoi la meniul principal</a>
+    <br><a href="/gastronomie"><Inapoi la meniul principal</a>
     '''
 
 @app.route('/chilli_con_carne/provenienta')
@@ -35,7 +35,7 @@ def afisare_provenienta():
     return f'''
     <h2>Tara/locul de provenienta:</h2>
     <p>{rezultat}</p>
-    <br><a href="/gastronomie">⬅️ Inapoi la meniul principal</a>
+    <br><a href="/gastronomie">Inapoi la meniul principal</a>
     '''
 
 @app.route('/chilli_con_carne/ingrediente')
@@ -44,7 +44,7 @@ def afisare_ingrediente():
     return f'''
     <h2>Ingrediente principale:</h2>
     <p>{rezultat}</p>
-    <br><a href="/gastronomie">⬅️ Inapoi la meniul principal</a>
+    <br><a href="/gastronomie">Inapoi la meniul principal</a>
     '''
 
 @app.route('/chilli_con_carne/preparare')
@@ -53,7 +53,7 @@ def afisare_preparare():
     return f'''
     <h2>Modul de preparare:</h2>
     <p>{rezultat}</p>
-    <br><a href="/gastronomie">⬅️ Inapoi la meniul principal</a>
+    <br><a href="/gastronomie">Inapoi la meniul principal</a>
     '''
 
 if __name__ == '__main__':
