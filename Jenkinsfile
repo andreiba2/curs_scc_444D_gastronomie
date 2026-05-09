@@ -1,11 +1,6 @@
 pipeline {
 
     agent any
-    
-    environment {
-        
-        PYTHONPATH = "${env.WORKSPACE}"
-    }
 
     stages {
     	stage('Verificare') {
@@ -18,17 +13,9 @@ pipeline {
         stage('Instalare dependinte') {
             steps {
                 sh '''
-                   
-                    python3 -m venv .venv
-
-                    
-                    . .venv/bin/activate
-
-                    
-                    pip install --upgrade pip
-
-                    
-                    pip install -r requirements.txt
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install -r requirements.txt
                 '''
                 echo'Dependente descarcate cu succes!'
             }
@@ -36,8 +23,10 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-            	echo 'Rulare teste...'
-                sh 'python3 pytest test_gulas.py'
+                sh '''
+                . venv/bin/activate
+                python3 -m pytest tests/
+                '''
             }
         }
     }
