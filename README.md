@@ -1,8 +1,9 @@
 # Proiect SCC - Gastronomie (Margherita)
-**Student:** Neacșu Radu-Costin
-**Grupa:**444D
-**Branch dezvoltare:**dev_neacsu_radu
-**Branch principal:** main_neacsu_radu
+
+**Student:** Neacșu Radu-Costin  
+**Grupa:** 444D  
+**Branch dezvoltare:** dev_neacsu_radu  
+**Branch principal:** main_neacsu_radu  
 
 ### 1. Funcționalitate adăugată
 - Implementare rute pentru Pizza Margherita: Principală, Proveniență, Ingrediente, Preparare.
@@ -13,10 +14,11 @@
 ### 3. Testare (Jenkins)
 - Testele unitare au fost rulate cu succes folosind un pipeline declarativ.
 - Rezultat Jenkins: PASS. Istoricul execuției și pipeline-ul vizual:
-![Jenkins Pipeline](screenshots/Jenkins%20Pipeline.png)
+
+![Jenkins Pipeline](screenshots/Jenkins_Pipeline.png)
 
 ### 4. Containerizare (Docker)
-Aplicația a fost containerizată și testată:
+Aplicația a fost containerizată și testată. Dovezi:
 
 - **Imaginea creată:** ![Imagine](screenshots/sudo_docker_images.png)
 
