@@ -6,7 +6,7 @@
   - [ingrediente_clatite](ca://s?q=Arata_functia_ingrediente_clatite) — returnează lista ingredientelor necesare pentru preparat.
   - [descriere_clatite](ca://s?q=Arata_functia_descriere_clatite) — oferă o scurtă prezentare a clătitelor americane.
 - Rute Flask implementate în `clatite.py`:
-  - `/gastronomie` — pagina principală a temei gastronomice
+  - `/clatite` — pagina principală a temei gastronomice
   - `/origine` — prezintă originea clătitelor americane
   - `/ingrediente` — afișează ingredientele folosite
   - `/preparare` — descrie pașii de preparare
@@ -31,7 +31,17 @@
 
 ---
 
-## 5) CI/CD
+## 5) Containerizare
+- Imaginea creată
+![Imagine Docker](images/Imagine_docker.jpg)
+- Containerul creat 
+![Container Docker](images/)
+- Mesaje consola
+![Log-uri](images/)
+
+- Log-urile containerului arată că serverul Flask rulează pe 0.0.0.0:5000 
+
+
 - Pipeline configurat în Jenkins pentru:
   - instalarea dependențelor
   - rularea testelor automate
