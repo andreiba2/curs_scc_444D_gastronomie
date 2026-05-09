@@ -26,7 +26,7 @@ def tema_gastronomie():
 def chilli_con_carne():
     return '''
     <h2>Element ales: Chilli con carne</h2>
-    <br><a href="/gastronomie"><Inapoi la meniul principal</a>
+    <br><a href="/gastronomie">Inapoi la meniul principal</a>
     '''
 
 @app.route('/chilli_con_carne/provenienta')
