@@ -23,6 +23,14 @@ STYLE = """
     h1 {
         margin-bottom: 20px;
     }
+    img {
+        max-width: 550px;
+        max-height: 412px;
+        border-radius: 10px; 
+        margin-top: 10px;
+        margin-bottom: 20px; 
+        box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+    }
     .btn {
         display: inline-block;
         margin: 10px;
@@ -33,13 +41,13 @@ STYLE = """
         font-weight: bold;
     }
     .btn-gastro { background: #333; }
-    .btn-rosu { background: #c0392b; }
-    .btn-verde { background: #27ae60; }
+    .btn-rosu { background: #c0392b; width: 200px; }
+    .btn-verde { background: #27ae60; width: 200px; }
     .btn-galben { background: #f1c40f; color: #000; }
     .btn-mov { background: #8e44ad; }
     .text {
         margin-top: 20px;
-        font-size: 1.1em;
+        font-size: 1em;
     }
 </style>
 """
@@ -59,6 +67,7 @@ def gastronomie():
 def ratatouille():
     return page("""
         <h1>Ratatouille<h1>
+        <img src="https://images.ctfassets.net/0e6jqcgsrcye/4teTkS26yJgQ4N30ofmyhX/33d2415ad06349ebb7ec030afdfc1db8/summerratatouille_thumbnail.webp" alt="Ratatouille image">
         <p class='text'>Afla mai multe despre acest preparat:</p>
         <a class='btn btn-rosu' href='/ratatouille/descriere'>Descriere</a>
         <a class='btn btn-verde' href='/ratatouille/origine'>Origine</a>
