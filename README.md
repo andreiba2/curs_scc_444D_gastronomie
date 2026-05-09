@@ -71,16 +71,16 @@ docker run -p 5000:5000 gastronomie-pizza
 Aplicația rulează în container și poate fi accesată la `http://localhost:5000/pizza`.
 
 ### Imagine Docker creată
-![Docker images](docker images.png)
+![Docker images](docker_images.png)
 
 ### Container creat
-![Docker ps](docker ps -a.png)
+![Docker ps](docker_ps.png)
 
 ### Browser - aplicație în container
 ![Browser pizza](localhost_principal.png)
 
 ### Consolă container
-![Consola](GET pizza 200.png)
+![Consola](GET_pizza.png)
 
 ---
 
