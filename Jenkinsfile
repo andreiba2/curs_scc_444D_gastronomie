@@ -17,14 +17,14 @@ pipeline {
         stage('Verificare Cod') {
             steps {
                 // Verifica functionalitatea intregii aplicatii
-                sh 'pylint --break-system-packages gastronomie.py'
+                sh 'python3 -m pylint gastronomie.py'
             }
         }
 
         stage('Teste') {
             steps {
                 // Rulează testele unitare
-                sh 'pytest --break-system-packages tests/'
+                sh 'python3 -m pytest tests/'
             }
         }
     }
