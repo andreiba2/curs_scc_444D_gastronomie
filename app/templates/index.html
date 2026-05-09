@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Sushi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Sushi</h1>
+
+        <h2>Preparat tradițional japonez</h2>
+
+        <p class="text-intro">Alege o secțiune pentru a afla mai multe:</p>
+
+        <nav class="meniu">
+            <a href="/origine">🌍 Țara de proveniență</a>
+            <a href="/ingrediente">🍚 Ingrediente principale</a>
+            <a href="/preparare">🔍 Modul de preparare</a>
+        </nav>
+
+        <img
+            class="imagine-sushi"
+            src="/static/sushi.jpg"
+            alt="Imagine sushi"
+        >
+    </main>
+</body>
+</html>
