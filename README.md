@@ -33,11 +33,11 @@
 
 ## 5) Containerizare
 - Imaginea creată
-![Imagine Docker](images/Imagine_docker.png)
+![Screenshot](screenshots/Imagine_docker.png)
 - Containerul creat 
-![Container Docker](images/container.png)
+![Screenshot](screenshots/container.png)
 - Log-urile containerului arată că serverul Flask rulează pe `0.0.0.0:5000`
-![Log-uri](images/mesaje_consola.png)
+![Screenshot](screenshots/mesaje_consola.png)
 
 
 - Pipeline configurat în Jenkins pentru:
