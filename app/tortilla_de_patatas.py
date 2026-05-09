@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from app.lib.biblioteca_tortilla import origine_tortilla, ingrediente_tortilla, preparare_tortilla
+from lib.biblioteca_tortilla import origine_tortilla, ingrediente_tortilla, preparare_tortilla
 
 app = Flask(__name__)
 
