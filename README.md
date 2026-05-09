@@ -34,8 +34,8 @@ Funcționalitate pentru elementul **Pizza**:
 | Containerizare | ✅ Realizată |
 | Documentație | ✅ Completă |
 | PR creat | ✅ PR #40 |
-| Review primit | ⏳ În așteptare |
-| Integrat în main | ⏳ În așteptare |
+| Review primit | ✅ Primit |
+| Integrat în main | ✅ Integrat în main_Simonescu_Matei |
 
 ---
 
@@ -94,6 +94,6 @@ Aplicația rulează în container și poate fi accesată la `http://localhost:50
 
 ## Ce mai este de făcut
 
-- [ ] Review de la coleg pentru PR #40
-- [ ] Merge în main_Simonescu_Matei
+- [x] Review de la coleg pentru PR #40
+- [x] Merge în main_Simonescu_Matei
 - [ ] Integrat README.md în branch-ul main al grupei
