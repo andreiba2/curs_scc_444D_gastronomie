@@ -41,11 +41,11 @@ pipeline {
         stage('Run Docker container') {
             steps {
                 sh '''
-
-                    docker run -d --name clatite_americane-$BUILD_NUMBER -p 5000:5000 clatite-app
+                
+                    docker run -d --name clatite_americane_clean-$BUILD_NUMBER -p 5050:5000 clatite-app
 
                     sleep 5
-                    docker logs clatite_americane-$BUILD_NUMBER
+                    docker logs clatite_americane_clean-$BUILD_NUMBER
                 '''
             }
         }
@@ -53,7 +53,7 @@ pipeline {
         stage('Cleanup') {
             steps {
                 sh '''
-                    docker rm -f clatite_americane-$BUILD_NUMBER || true
+                    docker rm -f clatite_americane_clean-$BUILD_NUMBER || true
                 '''
             }
         }
