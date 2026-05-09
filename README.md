@@ -83,17 +83,3 @@ Aplicația rulează în container și poate fi accesată la `http://localhost:50
 ![Consola](GET_pizza.png)
 
 ---
-
-## Pull Request-uri la care am făcut review
-
-| PR ID | Autor | Descriere |
-|-------|-------|-----------|
-| - | - | În așteptare |
-
----
-
-## Ce mai este de făcut
-
-- [x] Review de la coleg pentru PR #40
-- [x] Merge în main_Simonescu_Matei
-- [ ] Integrat README.md în branch-ul main al grupei
