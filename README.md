@@ -70,7 +70,11 @@ Am creat un Dockerfile bazat pe `python:3.12-slim` care instaleaza dependintele 
 - PR de la `dev_cosmin_antoci` la `main_cosmin_antoci`: in asteptare creare.
 - PR de la `main_cosmin_antoci` la `main`: in asteptare creare si review de la un coleg.
 
-## 6. Ce mai e de facut
+## 6. Pull Request-uri la care am facut review
+
+- PR #31 - "templates/index.html" de la colegul Costea Mihai Daniel (Brasovence) - Approved
+
+## 7. Ce mai e de facut
 
 - [ ] Crearea PR-ului de la `dev_cosmin_antoci` la `main_cosmin_antoci`
 - [ ] Crearea PR-ului de la `main_cosmin_antoci` la `main`
