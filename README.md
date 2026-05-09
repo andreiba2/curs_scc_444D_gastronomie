@@ -54,6 +54,7 @@ python3 -m pytest tests/test_pizza.py -v
 ```
 
 **Rezultat: 10/10 PASSED ✅**
+![Teste pytest](jenkins.png)
 
 ### Testare cu Jenkins
 Jenkinsfile configurat în branch-ul de dezvoltare.
@@ -68,6 +69,18 @@ docker run -p 5000:5000 gastronomie-pizza
 ```
 
 Aplicația rulează în container și poate fi accesată la `http://localhost:5000/pizza`.
+
+### Imagine Docker creată
+![Docker images](docker images.png)
+
+### Container creat
+![Docker ps](docker ps -a.png)
+
+### Browser - aplicație în container
+![Browser pizza](localhost_principal.png)
+
+### Consolă container
+![Consola](GET pizza 200.png)
 
 ---
 
