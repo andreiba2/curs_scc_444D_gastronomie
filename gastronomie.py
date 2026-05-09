@@ -1,23 +1,100 @@
 from flask import Flask
-from app.lib.biblioteca_gastronomie import ingrediente_clatite, descriere_clatite
+from app.lib.biblioteca_gastronomie import text_provenienta, text_ingrediente, text_preparare
 
 app = Flask(__name__)
 
-@app.route("/")
-def tema():
-    return "Tema: Gastronomie"
+STYLE = """
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #fff8e7; /* crem deschis */
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .card {
+        background: #fffdf8; /* crem cald */
+        max-width: 750px;
+        margin: 60px auto;
+        padding: 40px;
+        border-radius: 20px;
+        border: 2px solid #f3d9a4; /* miere deschisă */
+        box-shadow: 0 4px 20px rgba(180, 140, 80, 0.2);
+    }
+    h1 {
+        margin-bottom: 15px;
+        color: #c68b3f; /* caramel */
+        font-size: 2.8em;
+        text-shadow: 1px 1px 0 #fff;
+    }
+    .btn {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 22px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: #4a2e0f;
+        font-weight: bold;
+        border: 2px solid transparent;
+    }
+    .btn-miere { background: #f7c873; }
+    .btn-crem { background: #ffe9c7; }
+    .btn-auriu { background: #f1b24a; }
+    .btn-inchis { background: #d49a54; }
+    .btn:hover {
+        opacity: 0.85;
+        border-color: #8b5e2b;
+    }
+    .text {
+        margin-top: 20px;
+        font-size: 1.15em;
+        line-height: 1.6;
+        color: #5a4630;
+        text-align: justify;
+    }
+</style>
+"""
 
-@app.route("/clatite")
-def element():
-    return "Element ales: Clătite americane"
+def page(content):
+    return STYLE + f"<div class='card'>{content}</div>"
 
-@app.route("/clatite/ingrediente")
-def route_ingrediente():
-    return ingrediente_clatite()
+@app.route('/')
+def index():
+    return "<script>window.location.href='/gastronomie';</script>"
 
-@app.route("/clatite/descriere")
-def route_descriere():
-    return descriere_clatite()
+@app.route('/gastronomie')
+def gastronomie():
+    return page(f"""
+        <h1>Clătite Americane</h1>
+        <p class='text'>Desert pufos, dulce, cu aromă de miere și sirop de arțar.</p>
+        <a class='btn btn-miere' href='/clatite/preparare'>Preparare</a>
+        <a class='btn btn-crem' href='/clatite/origine'>Origine</a>
+        <a class='btn btn-auriu' href='/clatite/ingrediente'>Ingrediente</a>
+    """)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+@app.route('/clatite/preparare')
+def preparare():
+    return page(f"""
+        <h1 style='color:#c68b3f;'>Preparare</h1>
+        <p class='text'>{text_preparare()}</p>
+        <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
+    """)
+
+@app.route('/clatite/origine')
+def origine():
+    return page(f"""
+        <h1 style='color:#d49a54;'>Origine</h1>
+        <p class='text'>{text_provenienta()}</p>
+        <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
+    """)
+
+@app.route('/clatite/ingrediente')
+def ingrediente():
+    return page(f"""
+        <h1 style='color:#f1b24a;'>Ingrediente</h1>
+        <p class='text'>{text_ingrediente()}</p>
+        <a class='btn btn-inchis' href='/gastronomie'>Înapoi</a>
+    """)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
