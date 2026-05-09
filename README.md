@@ -50,3 +50,5 @@ Containerizare: Fișier Dockerfile creat, imagine construită și testată.
 ![Testarile Jenkins](screenshots/teste_jenkins.png)
 
 ![Dovada Teste Jenkins](screenshots/testare_jenkins.png)
+
+![Pipeline Jenkins](screenshots/pipeline_jenkins.png)
