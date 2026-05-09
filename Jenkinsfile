@@ -19,7 +19,7 @@ pipeline {
 				echo "Running tests using pytest"
 				sh """
 					. venv/bin/activate
-					pytest --maxfail=1 --disable-warnings -q
+					PYTHONPATH=. pytest --maxfail=1 --disable-warnings -q
 				"""
 			}
 		}
