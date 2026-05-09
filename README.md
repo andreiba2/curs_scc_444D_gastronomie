@@ -35,17 +35,23 @@ Interfața este interactivă și conține rute pentru:
 
 ## 3. Containerizare (Capturi de ecran obligatorii)
 ### Imaginea de container creată
+
 ![Imagine Docker](screenshots/docker_images.png)
 
-### Containerul creat pe baza imaginii 
+### Containerul creat pe baza imaginii
+ 
 ![Container Rulând](screenshots/docker_ps.png)
 
 ### Browserul accesând aplicația din container 
+
 ![Browser App](screenshots/meniu_aplicatie.png)
 
 ### Mesaje consolă (Log-uri apeluri) 
+
 ![Loguri Consolă](/screenshots/loguri.png)
 
 ### Build Time Trend
+
 ![Teste Jenkins](screenshots/teste_jenkins.png)
+
 ![Teste Jenkins](screenshots/jenkins_ok.png)
