@@ -1,36 +1,59 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
-        stage('Create virtual environment') {
+        stage('Build') {
+            agent any
             steps {
-                sh 'python3 -m venv .venv'
+                echo 'Building...'
+                sh '''
+                    cd app;
+                    pwd;
+                    ls -l;
+                    . ./activeaza_venv_jenkins
+                    '''
             }
         }
-
-        stage('Install dependencies') {
+        
+        /*stage('Testare') {
+            problema rulare in paralel, al doilea stage nu mai poate porni venv-ul
+            parallel {
+         */
+        stage('pylint - calitate cod') {
+            agent any
             steps {
                 sh '''
-                    . .venv/bin/activate
-                    python -m pip install --upgrade pip
-                    python -m pip install -r requirements.txt
+                    cd app;
+                    . ./activeaza_venv;
+                    echo '\n\nVerificare lib/*.py cu pylint\n';
+                    pylint --exit-zero lib/*.py;
+                    
+                    echo '\n\nVerificare tests/*.py cu pylint';
+                    pylint --exit-zero tests/*.py;
+                    
+                    echo '\n\nVerificare sysinfo.py cu pylint';
+                    pylint --exit-zero 444D_flori.py;
                 '''
             }
         }
 
-        stage('Run tests') {
+        stage('Unit Testing cu pytest') {
+            agent any
             steps {
+                echo 'Unit testing with Pytest...'
                 sh '''
-                    . .venv/bin/activate
-                    python -m app.tests.tests_app
-                    python -m app.tests.tests_libs
+                    cd app;
+                    . ./activeaza_venv;
+                    python3 -m pytest -v;
                 '''
             }
         }
-
-        stage('Docker build') {
+        /*    }
+        }*/
+        stage('Deploy') {
+            agent any
             steps {
-                sh 'docker build -t tortilla-app .'
+                echo 'IN lucru ! ...'
             }
         }
     }
