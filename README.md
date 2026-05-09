@@ -27,20 +27,15 @@
 
 ### Testare cu Jenkins
 - Rezultat: **PASS** 
-- [adauga screenshot cu rezultatul Jenkins]
+<img width="1625" height="520" alt="image" src="https://github.com/user-attachments/assets/dfc63e67-4068-470b-9d41-a5368e09ec49" />
+
 
 ## Containerizare
-- [adauga screenshot cu `docker images`]
-- [adauga screenshot cu `docker ps`]
-- [adauga screenshot cu browserul la http://localhost:5000/]
-- [adauga screenshot cu consolă container]
+<img width="1641" height="921" alt="image" src="https://github.com/user-attachments/assets/2642d0d0-528d-4b20-844f-81ea51958cd8" />
 
-## Integrare
-- PR creat din `dev_alexandru` → `main_alexandru`
-- Review primit de la: Badoi Andrei
+<img width="1641" height="836" alt="image" src="https://github.com/user-attachments/assets/486fbd11-561d-4f19-add1-4f0cc95a895e" />
 
-## PR-uri la care am facut review
-- (de completat dupa ce colegii fac PR-uri)
 
-## Ce mai este de facut
-- Integrat README in main prin PR
+
+
+
