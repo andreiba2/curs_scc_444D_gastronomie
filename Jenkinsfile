@@ -1,59 +1,41 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
         stage('Build') {
-            agent any
             steps {
-                echo 'Building...'
+                echo 'Building tortilla app...'
+                sh 'python3 -m venv .venv'
                 sh '''
-                    cd app;
-                    pwd;
-                    ls -l;
-                    . ./activeaza_venv_jenkins
-                    '''
-            }
-        }
-        
-        /*stage('Testare') {
-            problema rulare in paralel, al doilea stage nu mai poate porni venv-ul
-            parallel {
-         */
-        stage('pylint - calitate cod') {
-            agent any
-            steps {
-                sh '''
-                    cd app;
-                    . ./activeaza_venv;
-                    echo '\n\nVerificare lib/*.py cu pylint\n';
-                    pylint --exit-zero lib/*.py;
-                    
-                    echo '\n\nVerificare tests/*.py cu pylint';
-                    pylint --exit-zero tests/*.py;
-                    
-                    echo '\n\nVerificare sysinfo.py cu pylint';
-                    pylint --exit-zero 444D_flori.py;
+                    . .venv/bin/activate
+                    python -m pip install --upgrade pip
+                    python -m pip install -r requirements.txt
                 '''
             }
         }
 
-        stage('Unit Testing cu pytest') {
-            agent any
+        stage('Test') {
             steps {
-                echo 'Unit testing with Pytest...'
+                echo 'Testing tortilla app...'
                 sh '''
-                    cd app;
-                    . ./activeaza_venv;
-                    python3 -m pytest -v;
+                    . .venv/bin/activate
+                    python -m app.tests.tests_app
+                    python -m app.tests.tests_libs
                 '''
             }
         }
-        /*    }
-        }*/
-        stage('Deploy') {
-            agent any
+
+        stage('Docker Build') {
             steps {
-                echo 'IN lucru ! ...'
+                echo 'Building Docker image...'
+                sh 'docker build -t tortilla-app .'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                echo 'Aplicatia poate fi rulata cu: docker run -p 5050:5050 tortilla-app'
             }
         }
     }
