@@ -41,7 +41,11 @@ pipeline {
         stage('Run Docker container') {
             steps {
                 sh '''
-                    docker run -d --name clatite_americane-$BUILD_NUMBER -p 5050:5000 clatite-app
+<<<<<<< HEAD
+                    docker run -d --name clatite_americane-$BUILD_NUMBER -p 5000:5000 clatite-app
+=======
+                    docker run -d --name clatite_americane-$BUILD_NUMBER -p 5000:5000 clatite-app
+>>>>>>> 7973eaee9fd9fa5ccd3faa915a13b173d27697bf
                     sleep 5
                     docker logs clatite_americane-$BUILD_NUMBER
                 '''
