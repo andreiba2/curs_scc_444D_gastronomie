@@ -11,9 +11,9 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh '''
-                python3 -m venv venv
-                . venv/bin/activate
-                pip install -r requirements.txt
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install flask pytest
                 '''
             }
         }
@@ -21,8 +21,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                . venv/bin/activate
-                python3 -m pytest tests/
+                    . venv/bin/activate
+                    PYTHONPATH=$(pwd) python3 -m pytest tests/ -v
                 '''
             }
         }
