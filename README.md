@@ -47,9 +47,9 @@
 
 ## 5)  Rulare (Docker)
 
-Construire imagine
-docker build -t clatite-app .
+Construire imagine:
+`docker build -t clatite-app .`
 
-Lansare container
-docker run -d -p 5050:5000 --name clatite_container clatite-app
+Lansare container:
+`docker run -d -p 5050:5000 --name clatite_container clatite-app`
 
