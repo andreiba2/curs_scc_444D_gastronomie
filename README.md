@@ -77,7 +77,7 @@ Aplicația rulează în container și poate fi accesată la `http://localhost:50
 ![Docker ps](screenshots/pizza_docker_ps.png)
 
 ### Browser - aplicație în container
-![Browser pizza](screenshots/pizza_localhost_principal.png)
+![Browser pizza](screenshots/pizza_principal.png)
 
 ### Consolă container
 ![Consola](screenshots/pizza_GET_pizza.png)
