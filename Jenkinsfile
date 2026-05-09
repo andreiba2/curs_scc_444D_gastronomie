@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                     PYTHONPATH=. .venv/bin/python -m app.tests.tests_app
-                    PYTHONPATH=. .venv/bin/python -m app.tests.tests_libs
+                    PYTHONPATH=. .venv/bin/python -m app.tests.tests_lib
                 '''
             }
         }
