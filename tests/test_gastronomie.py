@@ -1,8 +1,5 @@
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from app.lib.biblioteca_gastronomie import provenienta_gulas, ingrediente_gulas
+import pytest
+from app.lib.biblioteca_gastronomie import provenienta_gulas, ingrediente_gulas, preparare_gulas
 
 def test_origine_gulas_not_empty():
     rezultat = provenienta_gulas()
@@ -21,3 +18,9 @@ def test_ingrediente_gulas_not_empty():
 def test_ingrediente_gulas_contine_carne():
     rezultat = ingrediente_gulas()
     assert "carne" in rezultat.lower() or "vită" in rezultat.lower()
+    
+def test_route():
+    raspuns = client.get('/gulas')
+    assert raspuns.status_code == 200
+    
+
