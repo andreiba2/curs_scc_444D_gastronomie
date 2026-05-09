@@ -1,5 +1,12 @@
 import pytest
+from gastronomie import app 
 from app.lib.biblioteca_gastronomie import provenienta_gulas, ingrediente_gulas, preparare_gulas
+
+@pytest.fixture
+def client():
+    app.config['TESTING'] = true
+    with app.test_client() as client:
+        yeld client
 
 def test_origine_gulas_not_empty():
     rezultat = provenienta_gulas()
