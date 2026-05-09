@@ -38,9 +38,7 @@
 ![Screenshot](screenshots/container.png)
 - Log-urile containerului arată că serverul Flask rulează pe `0.0.0.0:5000`
 ![Screenshot](screenshots/mesaje_consola.png)
-
-
-- Pipeline configurat în Jenkins pentru:
-  - instalarea dependențelor
-  - rularea testelor automate
-- Rezultat final: **Build reușit**, toate testele verzi.
+- Acces din browser: Pagina Principală
+![Screenshot](screenshots/interfata.png)
+- Testele executate folosind Jenkins
+![Screenshot](screenshots/testare_jetkins.png)
