@@ -4,19 +4,23 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                sh 'pip3 install -r requirements.txt'
+                sh '''
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install -r requirements.txt
+                '''
             }
         }
 
         stage('Run tests_app') {
             steps {
-                sh 'python3 -m app.tests.tests_app'
+                sh 'venv/bin/python -m app.tests.tests_app'
             }
         }
 
         stage('Run tests_libs') {
             steps {
-                sh 'python3 -m app.tests.tests_libs'
+                sh 'venv/bin/python -m app.tests.tests_libs'
             }
         }
 
