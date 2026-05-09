@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'pytest tests/test_mici.py -v'
+                sh 'pytest tests/'
             }
         }
     }
