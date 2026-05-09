@@ -1,32 +1,16 @@
 pipeline {
-    agent any
-
+    agent {
+        dockerfile { filename 'Dockerfile' }
+    }
     stages {
         stage('Install dependencies') {
             steps {
-                sh '''
-                python3 -m venv venv
-                . venv/bin/activate
-                pip install -r requirements.txt
-                '''
+                sh 'pip install -r requirement.txt'
             }
         }
-
-        stage('Run tests_app') {
+        stage('Run tests') {
             steps {
-                sh 'venv/bin/python -m app.tests.tests_app'
-            }
-        }
-
-        stage('Run tests_libs') {
-            steps {
-                sh 'venv/bin/python -m app.tests.tests_libs'
-            }
-        }
-
-        stage('Docker build') {
-            steps {
-                sh 'docker build -t tortilla-app .'
+                sh 'PYTHONPATH=. python -m unittest discover -s app/test'
             }
         }
     }
