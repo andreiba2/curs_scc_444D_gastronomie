@@ -1,4 +1,4 @@
-from gastronomie import app
+from clatite import app
 
 def test_home_route():
     client = app.test_client()
