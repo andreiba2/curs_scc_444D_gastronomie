@@ -17,5 +17,12 @@
 * **Testare / Jenkins:**
 
   ![](images/VirtualBoxVM_Jenkinsfile.png)
+
+* **Rulare:**
+```bash
+  docker build -t baklava-app .
+  docker run -p 5000:5000 baklava-app
+```
+
 * **Fișierul README.md:** Actualizat conform cerințelor.
 * **Ce mai este de făcut:** Integrarea finală pe branch-ul `main` a fișierului comun.
