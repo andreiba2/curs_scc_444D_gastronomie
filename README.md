@@ -80,7 +80,7 @@ Am creat un `Dockerfile` pentru a rula aplicația într-un container. Mai jos se
 ![Docker Build](screenshots/Docker.png)
 
 **Aplicație activă în Container:**
-![Running](screenshots/running.png)
+![Running](screenshots/Docker.png)
 
 ---
 
