@@ -37,19 +37,45 @@ Am implementat o aplicație Flask pentru tema Gastronomie, axată pe Ramen. Inte
 ## 3. Ce mai este de făcut
 Proiectul este considerat finalizat conform cerințelor.
 
-## 4. Containerizare
+## 4. Demonstrație Vizuală (Screenshots)
 
-![Imaginea de container creata](screenshots/docker_ss.png)
+### 🐋 Containerizare Docker
+*Construirea și rularea containerului*
 
-![Containerul creat pe baza imaginii](screenshots/docker_ps.png)
+![Imaginea de container creată](screenshots/docker_ss.png)
 
-![Browserul accesand aplicatia din container](screenshots/meniu_aplicatie.png)
+![Containerul rulând pe baza imaginii](screenshots/docker_ps.png)
 
-![Mesaje consola (Log-uri apeluri)](screenshots/loguri.png)
+---
 
-![Testarile Jenkins](screenshots/teste_jenkins.png)
+### 🌐 Interfața Web a Aplicației
+*Navigarea prin aplicația găzduită în container*
 
-![Dovada Teste Jenkins](screenshots/testare_jenkins.png)
+![Meniu Principal](screenshots/meniu_1.png)
 
-![Pipeline Jenkins](screenshots/pipeline_jenkins.png)
+![Meniu Ramen](screenshots/meniu_2.png)
+
+![Proveniență](screenshots/meniu_3.png)
+
+![Ingrediente](screenshots/meniu_4.png)
+
+![Preparare](screenshots/meniu_5.png)
+
+---
+
+### 🖥️ Jurnal Execuție (Logs)
+*Mesaje afișate în consolă la interacțiunea cu browser-ul*
+
+![Log-uri consolă apeluri](screenshots/loguri.png)
+
+---
+
+### ⚙️ CI/CD și Testare cu Jenkins
+*Verificarea automată a codului și a testelor unitare*
+
+![Configurare Jenkins Pipeline](screenshots/pipeline_jenkins.png)
+
+![Dovadă Rulare Teste Jenkins](screenshots/testare_jenkins.png)
+
+![Rezultat Final Teste Jenkins](screenshots/teste_jenkins.png)
 
