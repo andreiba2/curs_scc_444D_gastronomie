@@ -13,7 +13,7 @@ pipeline {
 	   }
           stage('Testare') {
 	      steps {
-		  sh 'python -m pytest test_gastronomie.py'
+		 sh 'PYTHONPATH=. python -m pytest test_gastronomie.py'
 	      }
           }
     }
