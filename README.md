@@ -468,6 +468,7 @@ Proiectul este considerat finalizat conform cerințelor.
 ---
 
 ## 8. Enache Victor-George - Piftie
+
 📝 Documentație Proiect: Piftie (Victor Enache)
 Element: Piftie
 
@@ -663,10 +664,10 @@ Am implementat o aplicație Flask pentru tema Cheesecake. Interfața conține ru
 
 ### Buildarea si rularea imaginii Docker
 
-![Docker Images](screenshots/poza_docker_build.png)
-![Docker Images](screenshots/poza_docker_run.png)
-![Docker Images](screenshots/poza_docker_logs.png)
-![Docker Images](screenshots/poza_docker_images.png)
+![Docker Images](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_docker_build.png?raw=true)
+![Docker Images](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_docker_run.png?raw=true)
+![Docker Images](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_docker_logs.png?raw=true)
+![Docker Images](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_docker_images.png?raw=true)
 
 ---
 
@@ -674,25 +675,25 @@ Am implementat o aplicație Flask pentru tema Cheesecake. Interfața conține ru
 
 ### Aplicație rulând în container
 
-![Home](screenshots/poza_home.png)
+![Home](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_home.png?raw=true)
 
 ### Pagina Proveniență
 
-![Provenienta](screenshots/poza_origine.png)
+![Provenienta](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_origine.png?raw=true)
 
 ### Pagina Ingrediente
 
-![Ingrediente](screenshots/poza_ingrediente.png)
+![Ingrediente](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_ingrediente.png?raw=true)
 
 ### Pagina Mod de Preparare
 
-![Preparare](screenshots/poza_preparare.png)
+![Preparare](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/poza_preparare.png?raw=true)
 
 ### Rezultat Pytest
     
     Am pornit local testele cu comanda "python3 -m pytest"
 
-![Pytest](screenshots/rezultat_pytest.png)
+![Pytest](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/rezultat_pytest.png?raw=true)
 
 ---
 
@@ -700,21 +701,220 @@ Am implementat o aplicație Flask pentru tema Cheesecake. Interfața conține ru
 
 Testele au rulat cu succes din Jenkins odata cu finalizarea aplicatiei si dupa fixarea erorilor de build specifice Jenkins.
 
-![Jenkins](screenshots/jenkins.png)
-![Jenkins](screenshots/jenkins_teste.png)
+![Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/jenkins.png?raw=true)
+![Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Ionescu_Eduard_Nicolae/screenshots/jenkins_teste.png?raw=true)
 
 ---
 
 ## 13. Konya Andra-Maria - Lasagna
-*(Lipește aici README-ul Andrei)*
+
+# Proiect VCGJ - Gastronomie: Lasagna
+**Dezvoltator:** Konya Andra-Maria
+**ID Dezvoltator:** andrakonya16
+
+## 1. Funcționalitate adăugată
+Am implementat funcționalitatea pentru preparatul **Lasagna** în cadrul temei de Gastronomie. Aceasta include:
+* O bibliotecă Python situată în `app/lib/biblioteca_gastronomie.py` cu funcții pentru ingrediente și mod de preparare.
+* Rute dedicate în aplicația principală `gastronomie.py` pentru vizualizarea acestor informații în browser.
+
+## 2. Stadiul implementării
+- [x] Codul sursă a fost adăugat în repository pe branch-ul de dezvoltare.
+- [x] Structura de directoare respectă cerințele (`app/lib/`).
+- [x] Aplicația WEB rulează și funcționalitatea poate fi accesată din browser.
+
+## 3. Testarea aplicației
+Testarea a fost realizată atât manual, cât și automat:
+* **Testare manuală:** Verificarea fiecărei rute direct în browser.
+* **Testare automată:** Utilizarea `unit-test`-elor în Python (fișierul `test_gastronomie.py`).
+* **Jenkins:** Fișierul `Jenkinsfile` este configurat pentru a rula testele automat la fiecare build. Testele trec cu succes (Rezultat: **PASS**).
+![Testare Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_jenkins.jpeg?raw=true)
+
+## 4. Integrare și Code Review
+* **Status PR:** Codul a fost integrat cu succes din branch-ul `dev_konya_andra` în `main_konya_andra`. Fişierul README.md a fost integrat în branch-ul `main` al grupei.
+* **Review-uri efectuate:** Am efectuat code review pentru Pull Request lui:
+    * PR ID # 78 - andreiba2
+
+## 5. Containerizare (Docker)
+Aplicația a fost containerizată folosind un `Dockerfile`. Containerul include toată funcționalitatea necesară pentru preparatul Lasagna și rulează cu succes.
+
+### Dovezi execuție container:
+1. **Imaginea de container creată:** ![Imagine Docker](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_imagine_docker.jpeg?raw=true) 
+2. **Containerul creat și rulând:** ![Container activ](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_container_functional.jpeg?raw=true)
+3. **Browserul accesând aplicația din container:** ![Pagina principala](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_pagina_web1.jpeg?raw=true)
+ ![Pagina Lasagna](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_pagina_web2.jpeg?raw=true)
+ ![Pagina mod de preparare](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_pagina_web3.jpeg?raw=true)
+ ![Pagina ingrediente](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_pagina_web4.jpeg?raw=true)
+4. **Consola cu mesajele de log ale aplicației:** ![Loguri consolă](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_logs.jpeg?raw=true)
+
+## 6. Stare finală
+- [x] Proiect finalizat cu succes și toate cerințele din documentație îndeplinite. Documentația este disponibilă în branch-ul de dezvoltare și în cel main.
+
 ---
 
 ## 14. Năstase Maria-Magdalena - Carbonara
-*(Lipește aici README-ul Mariei)*
+
+# 🍝 Proiect Gastronomie: Paste Carbonara
+
+**Student:** Năstase Maria-Magdalena  
+**Grupă:** 444D  
+**Disciplină:** SCC
+
+## Structură Proiect
+
+Fiecare componentă a fost organizată pentru a respecta cerințele de dezvoltare colaborativă și livrare continuă: 
+
+```text
+.
+├── app/
+│   └── lib/
+│       ├── __init__.py                # Initializare modul bibliotecă
+│       └── biblioteca_gastronomie.py  # Conține funcțiile specifice elementului (Ingrediente, Proveniență) 
+
+├── screenshots/                       # Capturi de ecran (Aplicație/Docker)
+├── Dockerfile                         # Configurare imagine Docker
+├── Jenkinsfile                        # Pipeline CI/CD Jenkins
+├── gastronomie.py                     # Aplicația principală Flask configurată cu cele 4 rute
+├── requirements.txt                   # Dependențe Python (Flask)
+├── test_gastronomie.py                # Teste unitare și integrare
+└── README.md                          # Documentația proiectului
+```
+
+## 2. Funcționalitate
+Aplicația Flask pentru tema **Gastronomie** se concentrează pe elementul **Paste Carbonara** și include cele **patru rute obligatorii**: 
+- **Tema:** `/gastronomie` - Pagina generală de prezentare a temei grupei. 
+- **Elementul:** `/gastronomie/carbonara` - Pagina principală dedicată elementului ales. 
+- **Caracteristica 1 -> Proveniență:** `/gastronomie/carbonara/provenienta` - Detalii despre originile rețetei. 
+- **Caracteristica 2 -> Ingrediente:** `/gastronomie/carbonara/ingrediente` - Lista ingredientelor autentice. 
+- **Caracteristica 3 -> Mod de preparare:** `/gastronomie/carbonara/preparare` - Tehnica specifică de gătire.
+
+---
+
+## 3. Stadiul implementării
+* **Cod aplicație:** Finalizat și integrat. Rutele și funcțiile din bibliotecă sunt complet funcționale.**Teste unitare:** Implementate în `test_gastronomie.py` și validate local. 
+* **Jenkins Pipeline:** Configurat corect; testele sunt executate automat și au statusul **PASS**. 
+* **Containerizare:** Proiectul este pregătit de livrare prin Docker; aplicația rulează pe portul **5000**. 
+* **Integrare:** Codul a fost integrat în branch-ul `main_nastase_magda` în urma procesului de review. 
+* **Ce mai este de făcut:** Proiectul este finalizat conform specificațiilor actuale. 
+
+## 4. Interfața Web (Capturi de ecran)
+*Aici sunt prezentate capturile cu interfața grafică dezvoltată:*
+
+### Pagina Principală (Home)
+![Home](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/Home.png?raw=true)
+
+### Structura Rutelor catre Caracteristici
+![Rute](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/rute.png?raw=true)
+
+### Detalii Carbonara (Caracteristicile)
+
+Caracteristica 1 -> Provenienta
+![Carbonara 1](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/car1.png?raw=true)
+Caracteristica 2 -> Ingrediente
+![Carbonara 2](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/car2.png?raw=true)
+Caracteristica 3 -> Preparare
+![Carbonara 3](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/car3.png?raw=true)
+---
+
+## 5. Containerizare (Dovezi Docker)
+Conform cerințelor de containerizare, am realizat următoarele capturi: 
+
+### Imaginea de container creată
+![Imagine](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/docker_imgs.png?raw=true)
+
+### Containerul rulând pe baza imaginii (docker ps)
+![Container](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/docker_ps.png?raw=true)
+
+### Browserul accesând aplicația din container
+![Browser](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/Home.png?raw=true) 
+
+### Mesajele afișate în consolă (Log-uri/docker logs)
+![Logs](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/docker_run.png?raw=true)
+
+### Rezultatul rulării testelor cu Jenkins (PASS)
+![Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_nastase_magda/screenshots/docker_run.png?raw=true)
+
+---
+
+## 6. Ghid de Rulare (Docker)
+* Pentru a lansa aplicația într-un container izolat, se utilizează următoarele comenzi:
+
+ Construire imagine
+
+* `docker build -t carbonara-app .`
+
+ Lansare container
+
+* `docker run -d -p 5000:5000 --name container_carbonara carbonara-app`
+
+---
+
+## 7. Integrare și Review
+Colaborarea a fost realizată prin sistemul de Pull Request pe GitHub: 
+
+* **ID Pull Request Personal:** #69, de pe branch-ul  dev_nastase_magda către main_nastase_magda
+* **Aprobare primită:** PR-ul a fost validat de la andreiba2, confirmând calitatea codului. 
+
+---
+
+*Proiect realizat pentru disciplina **Servicii Cloud și Containerizare**, 2026.* 
+
 ---
 
 ## 15. Neacșu Radu-Costin - Margherita
-*(Lipește aici README-ul lui Radu)*
+
+# Proiect SCC - Gastronomie (Margherita)
+
+**Student:** Neacșu Radu-Costin  
+**Grupa:** 444D  
+**Branch dezvoltare:** dev_neacsu_radu  
+**Branch principal:** main_neacsu_radu  
+
+### 1. Funcționalitate
+Am implementat o aplicație Flask pentru tema Gastronomie, axată pe Pizza Margherita. Interfața este interactivă și conține rute pentru:
+- **Principală:** Pagina de start și meniul de navigare.
+- **Proveniență:** Detalii despre originile preparatului.
+- **Ingrediente:** Listarea componentelor principale.
+- **Mod de preparare:** Descrierea procesului de gătire.
+
+### 2. Stadiul implementării
+- **Cod aplicație:** Finalizat. Rutele și funcțiile Flask au fost implementate cu succes.
+- **Teste unitare:** Implementate în `test_gastronomie.py` (validate local).
+- **Testare manuală:** Interfața web a fost validată manual prin accesarea fiecărei rute în browser pe `localhost:5000`, asigurând afișarea corectă a conținutului și funcționarea butoanelor.
+
+![Testare Manuala](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/Testare_manuala.png?raw=true)
+
+- **Jenkins Pipeline:** Configurat și funcțional în totalitate. Testele automate trec cu statusul PASS.
+- **Containerizare:** Fișier `Dockerfile` creat, imagine construită și testată cu succes.
+- **Integrare:** Codul a fost împins pe branch-ul `dev_neacsu_radu`. Pull Request-ul către `main_neacsu_radu` a fost creat, aprobat și integrat cu succes.
+- **Review-uri acordate:** Am realizat code review pentru un coleg de echipă.
+
+### 3. Testare Automată (Jenkins)
+- Testele unitare au fost rulate cu succes folosind un pipeline declarativ.
+- Rezultat Jenkins: PASS. Istoricul execuției și pipeline-ul vizual:
+
+![Jenkins Pipeline](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/Jenkins_Pipeline.png?raw=true)
+
+### 4. Containerizare (Docker)
+Aplicația a fost containerizată și testată. Dovezi:
+
+- **Imaginea creată:** ![Imagine](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/sudo_docker_images.png?raw=true)
+
+- **Containerul creat:** ![Container](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/sudo_docker_ps.png?raw=true)
+
+- **Mesaje consolă:** ![Logs](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/sudo_docker_run.png?raw=true)
+
+- **Acces din browser (Paginile aplicației):** *Pagina Principală:*
+![Browser](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/Pagina_principala.png?raw=true)
+
+*Pagina Proveniență:*
+![Provenienta](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/Provenienta.png?raw=true)
+
+*Pagina Ingrediente:*
+![Ingrediente](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/Ingrediente.png?raw=true)
+
+*Pagina Preparare:*
+![Preparare](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_neacsu_radu/screenshots/Preparare.png?raw=true)
+
 ---
 
 ## 16. Nițu Alexandra - Clătite americane
