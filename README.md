@@ -20,8 +20,8 @@
 
 * **Rulare:**
 ```bash
-  docker build -t baklava-app .
-  docker run -p 5000:5000 baklava-app
+  sudo docker build -t baklava-app .
+  sudo docker run -p 5000:5000 baklava-app
 ```
 
 * **Fișierul README.md:** Actualizat conform cerințelor.
