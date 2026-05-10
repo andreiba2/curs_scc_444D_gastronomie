@@ -1,18 +1,10 @@
-FROM python:3.10-slim
-
-RUN useradd -m appuser
+FROM python:3.10
 
 WORKDIR /app
 
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
-
 COPY . .
 
-RUN chown -R appuser:appuser /app
-
-USER appuser
+RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
