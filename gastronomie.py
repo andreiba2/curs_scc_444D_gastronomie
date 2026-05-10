@@ -1,5 +1,5 @@
 from flask import Flask
-from app.lib.biblioteca_gastronomie import descriere_piftie, ingrediente_piftie
+from app.lib.biblioteca_gastronomie import origine_piftie, ingrediente_piftie, preparare_piftie
 
 app = Flask(__name__)
 
@@ -24,13 +24,16 @@ def piftie():
     <html>
         <body style="font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f8f9fa;">
             <h1 style="color: #2c3e50;">Element: Piftie</h1>
-            <p style="font-size: 1.1em;">Un preparat tradițional esențial în gastronomia românească.</p>
+            <p style="font-size: 1.1em;">Alege o caracteristică pentru a afla mai multe detalii:</p>
             <div style="margin-top: 30px;">
-                <a href="/ingrediente_piftie" style="padding: 15px 25px; background: #27ae60; color: white; border-radius: 5px; text-decoration: none; margin-right: 10px; display: inline-block;">
-                    📋 Vezi Ingrediente
+                <a href="/origine_piftie" style="padding: 15px 25px; background: #8e44ad; color: white; border-radius: 5px; text-decoration: none; margin-right: 10px; display: inline-block;">
+                    🌍 Proveniență
                 </a>
-                <a href="/descriere_piftie" style="padding: 15px 25px; background: #2980b9; color: white; border-radius: 5px; text-decoration: none; display: inline-block;">
-                    👨‍🍳 Mod de Preparare
+                <a href="/ingrediente_piftie" style="padding: 15px 25px; background: #27ae60; color: white; border-radius: 5px; text-decoration: none; margin-right: 10px; display: inline-block;">
+                    📋 Ingrediente
+                </a>
+                <a href="/preparare_piftie" style="padding: 15px 25px; background: #2980b9; color: white; border-radius: 5px; text-decoration: none; display: inline-block;">
+                    👨‍🍳 Preparare
                 </a>
             </div>
             <br><br>
@@ -39,17 +42,16 @@ def piftie():
     </html>
     """
 
-@app.route('/descriere_piftie')
-def ruta_descriere():
-    continut = descriere_piftie()
+@app.route('/origine_piftie')
+def ruta_origine():
     return f"""
     <html>
-        <body style="font-family: Arial, sans-serif; padding: 40px; background-color: #f8f9fa; line-height: 1.6;">
-            <div style="max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 10px; shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h2 style="color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: 10px;">Mod de Preparare</h2>
-                <p style="font-size: 1.1em;">{continut}</p>
+        <body style="font-family: Arial, sans-serif; padding: 40px; background-color: #f8f9fa;">
+            <div style="max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h2 style="color: #8e44ad; border-bottom: 2px solid #8e44ad; padding-bottom: 10px;">Țara / Locul de Proveniență</h2>
+                <p style="font-size: 1.1em;">{origine_piftie()}</p>
                 <br>
-                <a href="/piftie" style="color: #2980b9; text-decoration: none; font-weight: bold;">⬅ Înapoi la Piftie</a>
+                <a href="/piftie" style="color: #8e44ad; text-decoration: none; font-weight: bold;">⬅ Înapoi la Piftie</a>
             </div>
         </body>
     </html>
@@ -57,17 +59,29 @@ def ruta_descriere():
 
 @app.route('/ingrediente_piftie')
 def ruta_ingrediente():
-    continut = ingrediente_piftie()
     return f"""
     <html>
         <body style="font-family: Arial, sans-serif; padding: 40px; background-color: #f8f9fa;">
-            <div style="max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 10px; shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h2 style="color: #27ae60; border-bottom: 2px solid #27ae60; padding-bottom: 10px;">Ingrediente Necesare</h2>
-                <div style="font-size: 1.1em; padding: 15px; border-left: 5px solid #27ae60; background: #f1fcf4;">
-                    {continut}
-                </div>
+            <div style="max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h2 style="color: #27ae60; border-bottom: 2px solid #27ae60; padding-bottom: 10px;">Ingrediente Principale</h2>
+                <p style="font-size: 1.1em;">{ingrediente_piftie()}</p>
                 <br>
                 <a href="/piftie" style="color: #27ae60; text-decoration: none; font-weight: bold;">⬅ Înapoi la Piftie</a>
+            </div>
+        </body>
+    </html>
+    """
+
+@app.route('/preparare_piftie')
+def ruta_preparare():
+    return f"""
+    <html>
+        <body style="font-family: Arial, sans-serif; padding: 40px; background-color: #f8f9fa; line-height: 1.6;">
+            <div style="max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h2 style="color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: 10px;">Modul de Preparare</h2>
+                <p style="font-size: 1.1em;">{preparare_piftie()}</p>
+                <br>
+                <a href="/piftie" style="color: #2980b9; text-decoration: none; font-weight: bold;">⬅ Înapoi la Piftie</a>
             </div>
         </body>
     </html>
