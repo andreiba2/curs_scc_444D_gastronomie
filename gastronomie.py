@@ -64,7 +64,7 @@ def page(content):
 
 @app.route('/gastronomie')
 def gastronomie():
-    image_url = url_for('static', filename='clatite.jpg')
+    image_url = "clatite.jpg"
     return page(f"""
         <h1>Clătite Americane</h1>
 
