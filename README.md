@@ -17,6 +17,7 @@ Testarea a fost realizată atât manual, cât și automat:
 * **Testare manuală:** Verificarea fiecărei rute direct în browser.
 * **Testare automată:** Utilizarea `unit-test`-elor în Python (fișierul `test_gastronomie.py`).
 * **Jenkins:** Fișierul `Jenkinsfile` este configurat pentru a rula testele automat la fiecare build. Testele trec cu succes (Rezultat: **PASS**).
+![Testare Jenkins](screenshots/k_jenkins.jpeg)
 
 ## 4. Integrare și Cod Review
 * **Status PR:** Codul a fost integrat cu succes din branch-ul `dev_konya_andra` în `main_konya_andra`. Fişierul README.md a fost integrat în branch-ul `main` al grupei.
@@ -27,13 +28,13 @@ Testarea a fost realizată atât manual, cât și automat:
 Aplicația a fost containerizată folosind un `Dockerfile`. Containerul include toată funcționalitatea necesară pentru preparatul Lasagna și rulează cu succes.
 
 ### Dovezi execuție container:
-1. **Imaginea de container creată:** ![Imagine Docker](k_imagine_docker.jpeg) 
-2. **Containerul creat și rulând:** ![Container activ](k_container_functional.jpeg) 
-3. **Browserul accesând aplicația din container:** ![Pagina principala](k_pagina_web1.jpeg)
- ![Pagina Lasagna](k_pagina_web2.jpeg)
- ![Pagina mod de preparare](k_pagina_web3.jpeg)
- ![Pagina ingrediente](k_pagina_web4.jpeg)
-4. **Consola cu mesajele de log ale aplicației:** ![Loguri consolă](k_logs.jpeg) 
+1. **Imaginea de container creată:** ![Imagine Docker](screenshots/k_imagine_docker.jpeg) 
+2. **Containerul creat și rulând:** ![Container activ](screenshots/k_container_functional.jpeg) 
+3. **Browserul accesând aplicația din container:** ![Pagina principala](screenshots/k_pagina_web1.jpeg)
+ ![Pagina Lasagna](screenshots/k_pagina_web2.jpeg)
+ ![Pagina mod de preparare](screenshots/k_pagina_web3.jpeg)
+ ![Pagina ingrediente](screenshots/k_pagina_web4.jpeg)
+4. **Consola cu mesajele de log ale aplicației:** ![Loguri consolă](screenshots/k_logs.jpeg) 
 
 ## 6. Stare finală
 - [x] Proiect finalizat cu succes și toate cerințele din documentație îndeplinite. Documentația este disponibilă în branch-ul de dezvoltare și în cel main.
