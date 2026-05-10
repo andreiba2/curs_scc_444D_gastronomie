@@ -147,25 +147,25 @@ Validarea funcționalității a fost realizată prin două metode:
 * **Automatizare Jenkins:** Proiectul trece prin stadiul de `Testare Automata` în Jenkins. 
   * **Rezultat:** `passed`
   
-  ![Jenkins](screenshots/b2_jenkins.png)
+  ![Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_jenkins.png?raw=true)
 
 ## 4. Dovezi Execuție Container (Docker)
 Conform cerințelor, mai jos sunt prezentate dovezile foto ale containerizării:
 
 ### A. Imaginea Docker creata
-![Imagine Docker](screenshots/b2_imagine_docker.png)
+![Imagine Docker](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_imagine_docker.png?raw=true)
 
 ### B. Containerul în rulare
-![Container activ](screenshots/b2_container_functional.png)
+![Container activ](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_container_functional.png?raw=true)
 
 ### C. Aplicația în Browser
-![Aplicație în browser](screenshots/b2_pagina_web1.png)
-![Aplicație în browser](screenshots/b2_pagina_web2.png)
-![Aplicație în browser](screenshots/b2_pagina_web3.png)
-![Aplicație în browser](screenshots/b2_pagina_web4.png)
+![Aplicație în browser](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_pagina_web1.png?raw=true)
+![Aplicație în browser](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_pagina_web2.png?raw=true)
+![Aplicație în browser](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_pagina_web3.png?raw=true)
+![Aplicație în browser](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_pagina_web4.png?raw=true)
 
 ### D. Log-urile containerului
-![Loguri consolă](screenshots/b2_logs.png)
+![Loguri consolă](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Badoi_Andrei/screenshots/b2_logs.png?raw=true)
 
 
 
