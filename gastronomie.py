@@ -5,7 +5,8 @@ from app.lib.biblioteca_gastronomie import (
     text_preparare
 )
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', static_url_path='')
+
 
 STYLE = """
 <style>
@@ -64,7 +65,7 @@ def page(content):
 
 @app.route('/gastronomie')
 def gastronomie():
-    image_url = "clatite.jpg"
+    image_url = "/clatite.jpg"
     return page(f"""
         <h1>Clătite Americane</h1>
 
