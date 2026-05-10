@@ -33,7 +33,7 @@ Interfața este interactivă și conține rute pentru:
 * **Jenkins Pipeline:** Configurat și funcțional (Rezultat: PASS) 
 * **Containerizare:** Fisier `Dockerfile` creat și testat
 * **Integrare:** Codul a fost împins pe branch-ul `dev_vijaica_stefan`. Pull Request-ul către `main_vijaica_stefan` a fost creat și se așteaptă/a primit review și aprobare de la un coleg. 
-* **Review-uri acordate:** Pull Request deschis (ID PR:61  verificat de `andreicurcadaniel` ).
+* **Review-uri acordate:** Pull Request deschis (ID PR:66  verificat de `andreicurcadaniel` ).
 ## 3. Containerizare (Capturi de ecran obligatorii)
 ### Imaginea de container creată
 
