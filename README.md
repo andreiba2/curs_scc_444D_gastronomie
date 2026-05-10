@@ -31,8 +31,9 @@ Interfața este interactivă și conține rute pentru:
 * **Cod aplicație:** Finalizat
 * **Teste unitare:** Implementate în `test_gastronomie.py` 
 * **Jenkins Pipeline:** Configurat și funcțional (Rezultat: PASS) 
-* **Containerizare:** Dockerfile creat și testat 
-
+* **Containerizare:** Fisier `Dockerfile` creat și testat
+* **Integrare:** Codul a fost împins pe branch-ul `dev_vijaica_stefan`. Pull Request-ul către `main_vijaica_stefan` a fost creat și se așteaptă/a primit review și aprobare de la un coleg. 
+* **Review-uri acordate:** Pull Request deschis (ID PR:  verificat de ).
 ## 3. Containerizare (Capturi de ecran obligatorii)
 ### Imaginea de container creată
 
@@ -48,10 +49,12 @@ Interfața este interactivă și conține rute pentru:
 
 ### Mesaje consolă (Log-uri apeluri) 
 
-![Loguri Consolă](/screenshots/loguri.png)
+![Loguri Consolă](screenshots/loguri.png)
 
 ### Build Time Trend
 
 ![Teste Jenkins](screenshots/teste_jenkins.png)
 
 ![Teste Jenkins](screenshots/jenkins_ok.png)
+
+
