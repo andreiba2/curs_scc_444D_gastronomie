@@ -100,3 +100,4 @@ Am configurat un Pipeline care execută automat pașii de Checkout, Build și Te
 
 **Vizualizare Etape Pipeline (Stage View):**
 ![Jenkins](screenshots/jerkins.png)
+ 
