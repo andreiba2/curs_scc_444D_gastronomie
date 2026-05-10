@@ -35,13 +35,17 @@
 - Imaginea creată
   
 ![Screenshot](screenshots/docker_imagine.png)
-- Containerul creat 
+- Containerul creat
+  
 ![Screenshot](screenshots/container_ss.png)
 - Mesaje afișate în consolă (Log-uri)
+  
 ![Screenshot](screenshots/log_consola.png)
 - Acces din browser: Pagina Principală
+  
 ![Screenshot](screenshots/interfata.png)
 - Testele executate folosind Jenkins
+  
 ![Screenshot](screenshots/testare_jetkins.png)
 
 ---
