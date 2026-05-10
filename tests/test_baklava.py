@@ -1,6 +1,6 @@
 import pytest
 from gastronomie import app
-from app.lib.biblioteca_gastronomie import descriere_baklava
+from app.lib.biblioteca_gastronomie import provenienta_baklava, ingrediente_baklava, preparare_baklava
 
 @pytest.fixture
 def client():
@@ -8,21 +8,33 @@ def client():
     with app.test_client() as client:
         yield client
 
-def test_descriere_baklava_functie():
-    # Testăm funcția de bază din biblioteca ta
-    assert "desert dulce" in descriere_baklava()
+# Teste unitare pentru funcțiile din bibliotecă
+def test_functii_biblioteca():
+    assert "Imperiul Otoman" in provenienta_baklava()
+    assert "yufka" in ingrediente_baklava()
+    assert "sirop" in preparare_baklava()
 
+# Teste pentru rutele Flask (asigură funcționarea corectă a aplicației web)
 def test_route_baklava(client):
-    # Testăm dacă pagina principală se încarcă și conține imaginea și butoanele
     response = client.get('/baklava')
     assert response.status_code == 200
     html = response.data.decode('utf-8')
-    assert "turkish-havuc-dilim-baklava" in html  # Verifică prezența imaginii
-    assert 'href="/baklava/descriere"' in html    # Verifică butonul descriere
-    assert 'href="/baklava/origine"' in html      # Verifică butonul origine
+    assert "turkish-havuc-dilim-baklava" in html
+    assert 'href="/baklava/provenienta"' in html
+    assert 'href="/baklava/ingrediente"' in html
+    assert 'href="/baklava/preparare"' in html
 
-def test_route_descriere(client):
-    # Testăm dacă descrierea se randează corect
-    response = client.get('/baklava/descriere')
+def test_route_provenienta(client):
+    response = client.get('/baklava/provenienta')
     assert response.status_code == 200
-    assert "desert dulce" in response.data.decode('utf-8')
+    assert "Imperiul Otoman" in response.data.decode('utf-8')
+
+def test_route_ingrediente(client):
+    response = client.get('/baklava/ingrediente')
+    assert response.status_code == 200
+    assert "yufka" in response.data.decode('utf-8')
+
+def test_route_preparare(client):
+    response = client.get('/baklava/preparare')
+    assert response.status_code == 200
+    assert "sirop" in response.data.decode('utf-8')
