@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Testare Automata') {
             steps {
-                sh 'pip install -r requirements.txt'
-                sh 'pytest test_gastronomie.py'
+                sh 'python3 -m pip install -r requirements.txt'
+                sh 'python3 -m pytest test_gastronomie.py'
             }
         }
         stage('Construire Container Docker') {
