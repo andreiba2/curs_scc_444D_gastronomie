@@ -1,5 +1,12 @@
 from flask import Flask, render_template
-from app.lib.biblioteca_gastronomie import descriere_brasovence, ingrediente_brasovence, tara_brasovence
+def descriere_brasovence():
+    return "Sunt niste clatite delicioase."
+
+def ingrediente_brasovence():
+    return "Contin carne si cascaval."
+
+def tara_brasovence():
+    return "Romania"
 
 app = Flask(__name__)
 
