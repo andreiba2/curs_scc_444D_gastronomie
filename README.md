@@ -77,10 +77,8 @@ Am dezvoltat o aplicație web folosind **Python** și **Flask** pentru tema **Ti
 Am creat un `Dockerfile` pentru a rula aplicația într-un container. Mai jos se vede procesul de construcție și aplicația rulând pe portul 5000.
 
 **Build Imagine Docker:**
-![Docker Build](screenshots/Docker.png)
-
 **Aplicație activă în Container:**
-![Running](screenshots/Docker.png)
+![Running](screenshots/docker.png)
 
 ---
 
