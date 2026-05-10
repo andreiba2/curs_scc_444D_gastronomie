@@ -25,25 +25,25 @@ def wrap(content):
 def home():
     return wrap("<h1>Gastronomie</h1><p style='font-size:1.2em;'>Explorați universul culinar și rețetele tradiționale.</p><a href='/gastronomie/carbonara' class='btn'>Vezi Proiect: Paste Carbonara</a>")
 
-# RUTA 2: Elementul specific (Carbonara) - ACEASTA ESTE RUTA NOUĂ CERUTĂ 
+# RUTA 2: Elementul specific (Carbonara)
 @app.route('/gastronomie/carbonara')
 def element():
-    return wrap("<h1>Paste Carbonara</h1><p style='font-size:1.2em; font-style:italic;'>Regina retetelor italienesti.</p><a href='/gastronomie/carbonara/provenienta' class='btn'>Provenienta</a><a href='/gastronomie/carbonara/ingrediente' class='btn'>Ingrediente</a><a href='/gastronomie/carbonara/preparare' class='btn'>Preparare</a><br><br><a href='/gastronomie' style='color:white;'>Inapoi la Tema</a>")
+    return wrap("<h1>Paste Carbonara</h1><p style='font-size:1.2em; font-style:italic;'>Regina retetelor italienesti.</p><a href='/gastronomie/carbonara/provenienta' class='btn'>Tara/locul de provenienta</a><a href='/gastronomie/carbonara/ingrediente' class='btn'>Ingrediente principale</a><a href='/gastronomie/carbonara/preparare' class='btn'>Modul de preparare</a><br><br><a href='/gastronomie' style='color:white;'>Inapoi la Tema</a>")
 
-# RUTA 3: Informație specifică 1 (Proveniență)
+# RUTA 3: Informație specifică 1 (Tara/locul de provenienta)
 @app.route('/gastronomie/carbonara/provenienta')
 def prov():
-    return wrap(f"<h2>Provenienta</h2><p class='text'>{text_provenienta()}</p><a href='/gastronomie/carbonara' class='btn'>Inapoi</a>")
+    return wrap(f"<h2>Tara/locul de provenienta</h2><p class='text'>{text_provenienta()}</p><a href='/gastronomie/carbonara' class='btn'>Inapoi</a>")
 
-# RUTA 4: Informație specifică 2 (Ingrediente)
+# RUTA 4: Informație specifică 2 (Ingrediente principale)
 @app.route('/gastronomie/carbonara/ingrediente')
 def ingr():
-    return wrap(f"<h2>Ingrediente</h2><p class='text'>{text_ingrediente()}</p><a href='/gastronomie/carbonara' class='btn'>Inapoi</a>")
+    return wrap(f"<h2>Ingrediente principale</h2><p class='text'>{text_ingrediente()}</p><a href='/gastronomie/carbonara' class='btn'>Inapoi</a>")
 
-# RUTA EXTRA (Preparare) - Păstrată pentru funcționalitate completă
+# RUTA EXTRA (Modul de preparare)
 @app.route('/gastronomie/carbonara/preparare')
 def prep():
-    return wrap(f"<h2>Preparare</h2><p class='text'>{text_preparare()}</p><a href='/gastronomie/carbonara' class='btn'>Inapoi</a>")
+    return wrap(f"<h2>Modul de preparare</h2><p class='text'>{text_preparare()}</p><a href='/gastronomie/carbonara' class='btn'>Inapoi</a>")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
