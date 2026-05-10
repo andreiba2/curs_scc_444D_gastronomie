@@ -20,6 +20,8 @@ def details():
             <li><a href="/lava-cake/ingrediente">Ingrediente</a></li>
             <li><a href="/lava-cake/preparare">Mod de preparare</a></li>
         </ul>
+
+        <a href="/"><h4>Inapoi</h4</a>
     '''
 @app.route('/lava-cake/provenienta')
 def afisare_provenienta():
