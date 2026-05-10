@@ -52,4 +52,7 @@ Proiectul este considerat finalizat conform cerințelor.
 ![Dovada Teste Jenkins](screenshots/testare_jenkins.png)
 
 ![Pipeline Jenkins](screenshots/pipeline_jenkins.png)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 11ebbb56ef447a21a8682130d3965a83a64e8be2
