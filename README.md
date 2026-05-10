@@ -60,6 +60,6 @@ Lansare container:
 
 ---
 
-## 5)  Integrare și Review
+## 6)  Integrare și Review
 Status PR: Integrat în branch-ul dev_Nitu_Alexandra.
 
