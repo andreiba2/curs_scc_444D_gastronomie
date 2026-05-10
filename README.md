@@ -87,7 +87,7 @@ Am configurat un Jenkinsfile cu 3 stage-uri (verificare fisiere, instalare depen
 
 ![Rezultatul testelor in Jenkins]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/jenkins_console_output.png))
 
-![Build-Time-ul din Jenkins]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/Build_Time_Trend.png))
+![Build-Time-ul din Jenkins]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/Build_Time_Trend.png?raw=true))
 ## 4. Containerizare
 
 Am creat un Dockerfile bazat pe `python:3.12-slim` care instaleaza dependintele si porneste aplicatia pe portul 5000.
