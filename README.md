@@ -19,7 +19,7 @@ Testarea a fost realizată atât manual, cât și automat:
 * **Jenkins:** Fișierul `Jenkinsfile` este configurat pentru a rula testele automat la fiecare build. Testele trec cu succes (Rezultat: **PASS**).
 ![Testare Jenkins](screenshots/k_jenkins.jpeg)
 
-## 4. Integrare și Cod Review
+## 4. Integrare și Code Review
 * **Status PR:** Codul a fost integrat cu succes din branch-ul `dev_konya_andra` în `main_konya_andra`. Fişierul README.md a fost integrat în branch-ul `main` al grupei.
 * **Review-uri efectuate:** Am primit code review pentru Pull Request de la:
     * PR ID # 76 - andreiba2
