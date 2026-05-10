@@ -33,6 +33,7 @@
 
 ## 5) Containerizare
 - Imaginea creată
+  
 ![Screenshot](screenshots/docker_imagine.png)
 - Containerul creat 
 ![Screenshot](screenshots/container_ss.png)
