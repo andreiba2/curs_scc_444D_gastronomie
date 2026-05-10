@@ -97,9 +97,8 @@ Conform cerințelor de containerizare, am realizat următoarele capturi:
 ## 7. Integrare și Review
 Colaborarea a fost realizată prin sistemul de Pull Request pe GitHub: 
 
-* **ID Pull Request Personal:** # 
-* **Review acordat:** Am efectuat review pentru colegul meu la Pull Request-ul cu ** ID: #  **. 
-* **Aprobare primită:** PR-ul a fost validat de un coleg, confirmând calitatea codului. 
+* **ID Pull Request Personal:** #69, de pe branch-ul  dev_nastase_magda către main_nastase_magda
+* **Aprobare primită:** PR-ul a fost validat de la andreiba2, confirmând calitatea codului. 
 
 ---
 
