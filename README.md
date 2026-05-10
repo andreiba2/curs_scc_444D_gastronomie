@@ -247,11 +247,114 @@ La final afișează `Success ✅` sau `Error ❌`.
 ---
 
 ## 4. Budur C. Maria - Sushi
-*(Lipește aici README-ul Mariei)*
+## Capturi de ecran
+
+### 1. Clonarea repository-ului și crearea branch-ului
+
+![Clonare repository și branch](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/2.png?raw=true)
+
+Descriere: captura arată clonarea repository-ului de pe GitHub și crearea branch-ului personal `dev_budur_maria`.
+
+### 2. Instalarea dependențelor
+
+![Instalare dependențe](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/3.png?raw=true)
+
+Descriere: captura arată instalarea pachetelor necesare pentru proiect: Flask, pytest și pylint.
+
+### 3. Crearea structurii proiectului
+
+![Structura proiectului](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/4.png?raw=true)
+
+Descriere: captura arată crearea folderelor și fișierelor principale pentru aplicația Flask.
+
+### 4. Rularea testelor locale
+
+![Teste locale](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/5.png?raw=true)
+
+Descriere: captura arată rularea testelor cu pytest și rezultatul obținut pentru testele aplicației și ale bibliotecii.
+
+### 5. Aplicația rulată în browser
+
+![Aplicația în browser](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/8.png?raw=true)
+
+Descriere: captura arată pagina principală a aplicației Sushi rulată în browser.
+
+### 6. Construirea imaginii Docker
+
+![Docker build](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/10.png?raw=true)
+
+Descriere: captura arată construirea imaginii Docker pentru aplicația Flask.
+
+### 7. Rularea containerului Docker
+
+![Docker run](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/14.png?raw=true)
+
+Descriere: captura arată rularea containerului Docker și pornirea aplicației pe portul 5000.
+
+### 8. Verificarea imaginilor și containerelor Docker
+
+![Docker images și ps](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/15.png?raw=true)
+
+Descriere: captura arată verificarea imaginilor Docker create și a containerelor rulate.
+
+### 9. Verificarea Jenkins
+
+![Jenkins status](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/17.png?raw=true)
+
+Descriere: captura arată verificarea serviciului Jenkins și faptul că acesta rulează.
+
+### 10. Push pe GitHub
+
+![Git push](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_budur_maria/images/24.png?raw=true)
+
+Descriere: captura arată încărcarea modificărilor pe GitHub pe branch-ul `dev_budur_maria`.
+
 ---
 
 ## 5. Butunoi I.D. Ioan-Alexandru - Mici
-*(Lipește aici README-ul lui Alexandru)*
+
+# Gastronomie - Mici
+**Dezvoltator:** Alexandru  
+**Grupă:** 444D  
+**Element:** Mici  
+
+## Functionalitate adaugata
+- `reteta_mici()` - returneaza reteta traditionala a micilor
+- `descriere_mici()` - returneaza descrierea preparatului
+- Rute Flask:
+  - `/` - pagina principala cu navigare
+  - `/gastronomie` - pagina generala gastronomie
+  - `/mici` - pagina dedicata micilor
+  - `/mici/reteta` - reteta micilor
+  - `/mici/descriere` - descrierea micilor
+
+## Stadiul implementarii
+- [x] Cod functional adaugat in `app/lib/biblioteca_gastronomie.py`
+- [x] Rute Flask adaugate in `gastronomie.py`
+- [x] Teste scrise in `tests/test_mici.py`
+- [x] Jenkinsfile configurat
+- [x] Dockerfile creat
+- [x] Aplicatie containerizata si testata
+
+## Testare
+### Testare manuala
+- Rulat `python gastronomie.py` si accesat rutele in browser 
+
+### Testare cu Jenkins
+- Rezultat: **PASS** 
+<img width="1625" height="520" alt="image" src="https://github.com/user-attachments/assets/dfc63e67-4068-470b-9d41-a5368e09ec49" />
+
+
+## Containerizare
+<img width="1641" height="921" alt="image" src="https://github.com/user-attachments/assets/2642d0d0-528d-4b20-844f-81ea51958cd8" />
+
+<img width="1641" height="836" alt="image" src="https://github.com/user-attachments/assets/486fbd11-561d-4f19-add1-4f0cc95a895e" />
+
+
+
+
+
+
 ---
 
 ## 6. Costea C. Mihai-Daniel - Brașovence
