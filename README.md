@@ -32,7 +32,7 @@ Am implementat o aplicație Flask pentru tema Gastronomie, axată pe Ramen. Inte
 - **Jenkins Pipeline:** Configurat și funcțional în totalitate. Testele trec cu statusul PASS.
 - **Containerizare:** Fișier `Dockerfile` creat, imagine construită și testată.
 - **Integrare:** Codul a fost împins pe branch-ul `dev_Curca_Andrei`. Pull Request-ul către `main_Curca_Andrei` a fost creat și se așteaptă review și aprobare de la un coleg.
-- **Review-uri acordate:** Review-uri acordate: Pull Request deschis (ID PR: #59 - verificat de NeacsuRadu01).
+- **Review-uri acordate:** Pull Request deschis (ID PR: #59 - verificat de NeacsuRadu01).
 
 ## 3. Ce mai este de făcut
 Proiectul este considerat finalizat conform cerințelor.
