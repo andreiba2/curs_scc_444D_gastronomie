@@ -21,8 +21,8 @@ Testarea a fost realizată atât manual, cât și automat:
 
 ## 4. Integrare și Cod Review
 * **Status PR:** Codul a fost integrat cu succes din branch-ul `dev_konya_andra` în `main_konya_andra`. Fişierul README.md a fost integrat în branch-ul `main` al grupei.
-* **Review-uri efectuate:** Am efectuat cod review pentru următoarele Pull Request-uri ale colegilor:
-    * PR ID # [Introduceți ID-ul aici] - [Nume Coleg]
+* **Review-uri efectuate:** Am primit code review pentru Pull Request de la:
+    * PR ID # 76 - andreiba2
 
 ## 5. Containerizare (Docker)
 Aplicația a fost containerizată folosind un `Dockerfile`. Containerul include toată funcționalitatea necesară pentru preparatul Lasagna și rulează cu succes.
