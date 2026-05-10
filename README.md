@@ -44,6 +44,10 @@ Am implementat o aplicație Flask pentru tema Cheesecake. Interfața conține ru
 - **Jenkins Pipeline:** Configurat și funcțional în totalitate.
 - **Containerizare:** Fișier Dockerfile creat, imagine construită și testată.
 
+##Integrare PR #2, #8, #37 inchise din dev_Ionescu_Eduard_Nicolae către main_Ionescu_Eduard_Nicolae. 
+##Integrare PR #56 deschis din dev_Ionescu_Eduard_Nicolae către main_Ionescu_Eduard_Nicolae (am atasat rezultatul testelor din Jenkins). 
+##Am pus la review README-ul către ramura main.
+##Am facut review la PR #55.
 ---
 
 ## 3. Containerizare
