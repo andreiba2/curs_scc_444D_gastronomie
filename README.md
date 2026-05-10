@@ -33,11 +33,11 @@
 
 ## 5) Containerizare
 - Imaginea creată
-![Screenshot](screenshots/Imagine_docker.png)
+![Screenshot](screenshots/docker_imagine.png)
 - Containerul creat 
-![Screenshot](screenshots/container.png)
+![Screenshot](screenshots/container_ss.png)
 - Mesaje afișate în consolă (Log-uri)
-![Screenshot](screenshots/mesaje_consola.png)
+![Screenshot](screenshots/log_consola.png)
 - Acces din browser: Pagina Principală
 ![Screenshot](screenshots/interfata.png)
 - Testele executate folosind Jenkins
