@@ -25,6 +25,8 @@ Validarea funcționalității a fost realizată prin două metode:
 * **Testare Automată (Unit Testing):** Am creat scriptul `test_gastronomie.py` care verifică integritatea datelor pentru Paella folosind `pytest`.
 * **Automatizare Jenkins:** Proiectul trece prin stadiul de `Testare Automata` în Jenkins. 
   * **Rezultat:** `passed`
+  
+  ![Jenkins](screenshots/b2_jenkins.png)
 
 ## 4. Dovezi Execuție Container (Docker)
 Conform cerințelor, mai jos sunt prezentate dovezile foto ale containerizării:
