@@ -47,6 +47,8 @@ Interfața este interactivă și conține rute pentru:
 
 ![Browser App](screenshots/meniu_aplicatie.png)
 
+![Browser App](screenshots/meniu_aplicatie_1.png)
+
 ### Mesaje consolă (Log-uri apeluri) 
 
 ![Loguri Consolă](screenshots/loguri.png)
