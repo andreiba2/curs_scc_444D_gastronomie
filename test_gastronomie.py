@@ -1,5 +1,5 @@
 import unittest
-from app.lib.biblioteca_gastronomie import descriere_brasovence, ingrediente_brasovence
+from gastronomie import descriere_brasovence, ingrediente_brasovence
 
 class TestBrasovence(unittest.TestCase):
 	def test_descriere(self):
