@@ -26,5 +26,5 @@ class TestGastronomie(unittest.TestCase):
         self.assertEqual(raspuns.status_code, 200)
         self.assertIn(b'cuptor', raspuns.data)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     unittest.main()
