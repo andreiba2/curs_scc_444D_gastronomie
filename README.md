@@ -75,19 +75,19 @@ Am implementat o aplicatie Flask pentru tema Gastronomie, axata pe Chilli con ca
 
 Aplicatia a fost testata manual din browser, accesand toate rutele si verificand ca informatiile se afiseaza corect.
 
-![Pagina principala]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/pagina_principala_site.png))
+![Pagina principala](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/pagina_principala_site.png?raw=true)
 
-![Pagina ingrediente]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/pagina_ingrediente.png))
+![Pagina ingrediente](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/pagina_ingrediente.png?raw=true)
 
 ### Testare cu Jenkins
 
 Am configurat un Jenkinsfile cu 3 stage-uri (verificare fisiere, instalare dependinte, testare unitara). Toate cele 10 teste trec cu succes.
 
-![Pipeline-ul Jenkins]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/jenkins_pagina_principala_pipeline.png))
+![Pipeline-ul Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/jenkins_pagina_principala_pipeline.png?raw=true)
 
-![Rezultatul testelor in Jenkins]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/jenkins_console_output.png))
+![Rezultatul testelor in Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/jenkins_console_output.png?raw=true)
 
-![Build-Time-ul din Jenkins]((https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/Build_Time_Trend.png?raw=true))
+![Build-Time-ul din Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_cosmin_antoci/screenshots/Build_Time_Trend.png?raw=true)
 ## 4. Containerizare
 
 Am creat un Dockerfile bazat pe `python:3.12-slim` care instaleaza dependintele si porneste aplicatia pe portul 5000.
