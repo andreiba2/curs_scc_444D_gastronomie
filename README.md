@@ -727,7 +727,7 @@ Testarea a fost realizată atât manual, cât și automat:
 * **Testare manuală:** Verificarea fiecărei rute direct în browser.
 * **Testare automată:** Utilizarea `unit-test`-elor în Python (fișierul `test_gastronomie.py`).
 * **Jenkins:** Fișierul `Jenkinsfile` este configurat pentru a rula testele automat la fiecare build. Testele trec cu succes (Rezultat: **PASS**).
-![Testare Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/k_jenkins.jpeg?raw=true)
+![Testare Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_konya_andra/screenshots/testare_jenkins.png?raw=true)
 
 ## 4. Integrare și Code Review
 * **Status PR:** Codul a fost integrat cu succes din branch-ul `dev_konya_andra` în `main_konya_andra`. Fişierul README.md a fost integrat în branch-ul `main` al grupei.
