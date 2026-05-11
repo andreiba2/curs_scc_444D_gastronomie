@@ -9,7 +9,7 @@ pipeline {
         stage('Instalare Dependente') {
             steps {
                 echo 'Instalam pytest si Flask pentru rularea testelor...'
-                sh 'pip3 install -r requirements.txt --break-system-packages'
+                sh 'python3 -m pip install -r requirements.txt --break-system-packages'
             }
         }
         stage('Verificare fisiere') {
@@ -21,8 +21,9 @@ pipeline {
         stage('Testare Unitara (Pytest)') {
             steps {
                 echo 'Rulam testele unitare cu Pytest...'
-                sh 'pytest test_gastronomie.py -v'
+                sh 'python3 -m pytest test_gastronomie.py -v'
             }
         }
     }
 }
+
