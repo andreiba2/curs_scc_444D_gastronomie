@@ -918,41 +918,699 @@ Aplicația a fost containerizată și testată. Dovezi:
 ---
 
 ## 16. Nițu Alexandra - Clătite americane
-*(Lipește aici README-ul Alexandrei)*
+
+🍽️ Proiect Gastronomie – Clătite Americane
+---
+
+## 1) Funcționalitate
+- Funcții implementate în `app/lib/biblioteca_gastronomie.py`:
+  - [ingrediente_clatite](ca://s?q=Arata_functia_ingrediente_clatite) — returnează lista ingredientelor necesare pentru preparat.
+  - [descriere_clatite](ca://s?q=Arata_functia_descriere_clatite) — oferă o scurtă prezentare a clătitelor americane.
+- Rute Flask implementate în `clatite.py`:
+  - `/clatite` — pagina principală a temei gastronomice
+  - `/origine` — prezintă originea clătitelor americane
+  - `/ingrediente` — afișează ingredientele folosite
+  - `/preparare` — descrie pașii de preparare
+- Interfață: design simplu, culori calde și o imagine reprezentativă cu clătite americane.
+
+---
+
+## 2) Stadiul implementării
+- Codul complet este disponibil în branch-ul de dezvoltare `dev_Nitu_Alexandra`.
+
+---
+
+## 3) Testare
+- Framework utilizat: **pytest**
+- Locație teste: folderul `tests/`
+- Status: **Toate testele au trecut cu succes** în pipeline-ul Jenkins.
+
+---
+
+## 4) Integrare
+- Pull Request deschis din `dev_Nitu_Alexandra` către `main_Nitu_Alexandra`.
+
+---
+
+## 5) Containerizare
+- Imaginea creată
+  
+![Screenshot](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Nitu_Alexandra/screenshots/docker_imagine.png?raw=true)
+- Containerul creat
+  
+![Screenshot](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Nitu_Alexandra/screenshots/container_ss.png?raw=true)
+- Mesaje afișate în consolă (Log-uri)
+  
+![Screenshot](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Nitu_Alexandra/screenshots/log_consola.png?raw=true)
+- Acces din browser: Pagina Principală
+  
+![Screenshot](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Nitu_Alexandra/screenshots/interfata.png?raw=true)
+- Testele executate folosind Jenkins
+  
+![Screenshot](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Nitu_Alexandra/screenshots/testare_jetkins.png?raw=true)
+
+---
+
+
+
+
 ---
 
 ## 17. Olteanu Rareș-Cristian - Baklava
-*(Lipește aici README-ul lui Rareș)*
+
+# Element: Baklava
+
+* **Funcționalitate adăugată:** Rutele `/baklava`, `/baklava/descriere`, `/baklava/origine` și funcțiile aferente din `biblioteca_gastronomie.py`.
+* **Stadiul implementării:** Codul pentru elementul baklava a fost adăugat integral.
+* **Testare:** Fișier Jenkins configurat. Testele unitare (pytest) trec cu succes la testarea manuală și executate prin Jenkins.
+* **Integrare:** PR deschis din `dev_Olteanu_Rares` către `main_Olteanu_Rares` (cu rezultate teste atașate). Aștept review pentru PR-ul către ramura `main` pentru README.
+* **Containerizare:** Imagine creată și testată local.
+
+  ![](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Olteanu_Rares/images/Code_-_DockerContainerImage.png?raw=true)
+
+  ![](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Olteanu_Rares/images/Code_-_DockerConainerID.png?raw=true)
+
+  ![](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Olteanu_Rares/images/VirtualBoxVM_Flask.png?raw=true)
+
+  ![](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Olteanu_Rares/images/Code_-_DockerLogs.png?raw=true)
+
+* **Testare / Jenkins:**
+
+  ![](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Olteanu_Rares/images/VirtualBoxVM_Jenkinsfile.png?raw=true)
+
+* **Rulare:**
+```bash
+  sudo docker build -t baklava-app .
+  sudo docker run -p 5000:5000 baklava-app
+```
+
 ---
 
 ## 18. Panait Vlad-Marian - Tiramisu
-*(Lipește aici README-ul lui Vlad)*
+
+# Proiect Gastronomie: Tiramisu ☕
+
+**Student:** Vlad Panait  
+**Grupă:** 444D  
+**Materia:** SCC (Servicii de cloud și containerizare)
+
+---
+
+##  Structură Proiect pe GitHub
+
+```text
+curs_scc_444D_gastronomie/
+├── app/
+│   └── lib/
+│       ├── __init__.py
+│       └── biblioteca_gastronomie.py
+├── screenshots/
+│   ├── Docker.png
+│   ├── home.png
+│   ├── ingredients.png
+│   ├── jerkins.png
+│   ├── origins.png
+│   ├── prepare.png
+│   ├── pylint.png
+│   ├── pytest.png
+│   └── running.png
+├── .gitignore
+├── Dockerfile
+├── Jenkinsfile
+├── README.md
+├── gastronomie.py
+├── requirements.txt
+└── test_gastronomie.py
+```
+
+---
+
+## 1.  Funcționalitate Aplicație
+
+Am dezvoltat o aplicație web folosind **Python** și **Flask** pentru tema **Tiramisu**. Aplicația este structurată pentru a oferi informații esențiale despre rețetă prin rute dedicate:
+
+* **Pagina Principală:** Meniu interactiv cu butoane către secțiuni.
+* **Istoric (`/tiramisu`):** Detalii despre originea desertului.
+* **Ingrediente (`/feature-1`):** Listă completă de cumpărături.
+* **Preparare (`/feature-2`):** Instrucțiuni pas cu pas.
+
+---
+
+## 2.  Tehnologii și Implementare
+
+* **Backend:** Flask (Python 3).
+* **Validare Cod:** `pylint` pentru calitatea codului.
+* **Testare:** `pytest` pentru verificarea automată a rutelor.
+* **CI/CD:** Jenkins Pipeline (automatizare completă).
+* **Containerizare:** Docker (împachetare și rulare izolată).
+
+---
+
+## 3.  Prezentare Interfață (Screenshots)
+
+### Pagina Principală (Home)
+![Home](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/home.png?raw=true)
+
+### Pagina Proveniență & Istoric
+![Origine](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/origins.png?raw=true)
+
+### Pagina Ingrediente (Feature 1)
+![Ingrediente](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/ingredients.png?raw=true)
+
+### Pagina Mod de Preparare (Feature 2)
+![Preparare](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/prepare.png?raw=true)
+
+---
+
+## 4.  Containerizare Docker
+
+Am creat un `Dockerfile` pentru a rula aplicația într-un container. Mai jos se vede procesul de construcție și aplicația rulând pe portul 5000.
+
+**Build Imagine Docker:**
+**Aplicație activă în Container:**
+![Running](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/docker.png?raw=true)
+
+---
+
+## 5.  Testare și Calitate (QA)
+
+Calitatea proiectului este asigurată prin teste automate care verifică dacă toate paginile se încarcă corect.
+
+**Rezultate Pytest:**
+![Pytest](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/pytest.png?raw=true)
+
+**Scor Calitate Pylint:**
+![Pylint](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/pylint.png?raw=true)
+---
+
+## 6.  Jenkins Pipeline
+
+Am configurat un Pipeline care execută automat pașii de Checkout, Build și Test la fiecare push pe GitHub.
+
+**Vizualizare Etape Pipeline (Stage View):**
+![Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vlad_panait/screenshots/jerkins.png?raw=true)
+
 ---
 
 ## 19. Popescu Bogdan-Constantin - Tacos
-*(Lipește aici README-ul lui Bogdan)*
+
 ---
 
 ## 20. Sămaru Alexandru-Octavian - Salată de boeuf
-*(Lipește aici README-ul lui Alexandru)*
+
+🥗 Proiect SCC - Gastronomie: Salata de Boeuf
+Acest proiect reprezintă implementarea individuală a elementului Salata de Boeuf în cadrul temei de grupă „Gastronomie”, respectând fluxul de lucru Git, testarea automată cu Jenkins și containerizarea cu Docker.
+
+🛠️ Detalii Implementare
+1. Funcționalitate Aplicație
+Aplicația este dezvoltată în Python folosind framework-ul Flask. Au fost implementate următoarele componente:
+
+Bibliotecă locală: app/lib/biblioteca_gastronomie.py conține funcțiile descriere_salata_boeuf() și ingrediente_salata_boeuf().
+
+Rute Flask:
+
+/gastronomie - Pagina de prezentare a temei generale.
+
+/salata_boeuf - Pagina principală a elementului.
+
+/descriere_salata_boeuf - Afișează instrucțiunile de preparare.
+
+/ingrediente_salata_boeuf - Afișează lista de ingrediente necesare.
+
+🧪 Testare și Integrare
+Testare Automată (Jenkins)
+A fost configurat un fișier Jenkinsfile care rulează automat testele unitare (pytest) la fiecare build.
+
+Status Build: ✅ PASS
+
+<img width="1040" height="525" alt="image" src="https://github.com/user-attachments/assets/c5d01dae-2dac-4a8d-a07d-0403fd506d07" />
+
+Fișier test: test_salata_boeuf.py (verifică integritatea datelor și prezența cuvintelor cheie).
+
+Integrare Git
+Branch-uri folosite: dev_alexandru_samaru -> main_alexandru_samaru.
+
+Pull Request: Creat cu succes, include raportul de testare Jenkins.
+
+🐳 Containerizare (Docker)
+Aplicația a fost împachetată într-un container Docker pentru izolare și portabilitate.
+
+Dovezi Implementare:
+1. Imaginea Docker creată:
+<img width="802" height="44" alt="image" src="https://github.com/user-attachments/assets/bc313b66-33c3-49fe-8cb3-d0046d6b35b7" />
+
+2. Containerul pornit și funcțional:
+<img width="1130" height="130" alt="image" src="https://github.com/user-attachments/assets/ed7381c5-8c70-4d48-bc3a-4929e59f686f" />
+
+3. Accesarea aplicației din browser:
+<img width="578" height="175" alt="image" src="https://github.com/user-attachments/assets/0333700a-98cc-4803-ba95-a1a19f021113" />
+
+4. Log-urile containerului (Consolă):
+<img width="922" height="242" alt="image" src="https://github.com/user-attachments/assets/553101b9-e91a-4d88-ac91-cf006373abe3" />
+
+🚀 Ce urmează?
+Integrarea liniei de status în README.md general al grupei de pe ramura main.
+
+Arhivarea și predarea proiectului.
+
 ---
 
 ## 21. Stănciulescu Cristian-Valentin - Ratatouille
-*(Lipește aici README-ul lui Cristian)*
+
+# Gastronomie: Ratatouille
+
+## 1) Funcționalitatea adăugată
+- Tema: **Gastronomie**
+- Element ales: **Ratatouille**
+- Funcții adăugate în `app/lib/biblioteca_gastronomie.py`:
+  - `descriere_ratatouille()` – returnează o scurtă descriere a preparatului.
+  - `origine_ratatouille()` – returnează un text scurt despre originea preparatului.
+- Rute Flask implementate în `gastronomie.py`:
+  - `/gastronomie` – pagină de bun venit + buton către Ratatouille
+  - `/ratatouille` – pagină element + butoane către descriere/origine
+  - `/ratatouille/descriere` – afișează descrierea
+  - `/ratatouille/origine` – afișează originea
+- Interfață: butoane colorate inspirate din culorile preparatului și o imagine cu prepratul.
+
+---
+
+## 2) Stadiul implementării (dacă codul a fost adăugat)
+- Codul a fost adăugat integral în branch-ul de dezvoltare `dev_Stanciulescu_Cristian`.
+
+---
+
+## 3) Testare
+- Framework: **pytest**
+- Locație: `tests/`
+- Status testare: Toate testele au trecut cu succes la executarea prin Jenkins.
+
+---
+
+## 4) Integrare
+- PR deschis din `dev_Stanciulescu_Cristian` către `main_Stanciulescu_Cristian`.
+
+---
+
+## 5) Containerizare
+- Procesul de creare a imaginii Docker
+![Imagine Docker](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Stanciulescu_Cristian/images/creare_imagine_docker.png?raw=true)
+
+- Pornirea containerului Docker în background
+![Container Docker](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Stanciulescu_Cristian/images/creare_container_docker.png?raw=true)
+    
+- Log-urile containerului arată că serverul Flask rulează pe `0.0.0.0:5000`
+![Log-uri](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Stanciulescu_Cristian/images/docker_logs.png?raw=true)
+
+- Pagina cu preparatul de mâncare Ratatouille
+![Prezentare pagină web](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Stanciulescu_Cristian/images/prezentare_pagina_ratatouille.png?raw=true)
+
+- Testele executate folosind Jenkins
+![Teste](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Stanciulescu_Cristian/images/testare_jenkins.png?raw=true)
+
 ---
 
 ## 22. Șerbănescu Daniela-Cristina - Tortilla de patatas
-*(Lipește aici README-ul Danielei)*
+
+# Tortilla de Patatas - Flask App
+
+## Descriere
+
+Această aplicație web a fost realizată folosind Flask și prezintă preparatul tradițional spaniol Tortilla de Patatas.
+
+Aplicația conține:
+- pagina principală
+- țara de proveniență
+- ingredientele principale
+- modul de preparare
+
+---
+
+## Tehnologii folosite
+
+- Python
+- Flask
+- HTML
+- CSS
+- Docker
+- Jenkins
+- GitHub
+
+---
+
+## Structura proiectului
+
+```text
+app/
+ ├── lib/
+ ├── templates/
+ ├── static/
+ ├── tests/
+ └── tortilla_de_patatas.py
+```
+
+---
+
+## Rulare aplicație
+
+```bash
+python3 -m app.tortilla_de_patatas
+```
+
+Aplicația rulează pe:
+
+```text
+http://127.0.0.1:5050
+```
+
+---
+
+## Testare
+
+Teste rulate:
+
+```bash
+python3 -m app.tests.tests_app
+python3 -m app.tests.tests_lib
+```
+
+Rezultat:
+- 4 teste pentru aplicație
+- 3 teste pentru bibliotecă
+
+---
+
+## Docker
+
+Build imagine:
+
+```bash
+docker build -t tortilla-app .
+```
+
+Run container:
+
+```bash
+docker run -p 5050:5050 tortilla-app
+```
+
+---
+
+## Jenkins
+
+Pipeline Jenkins:
+- instalare dependențe
+- rulare teste
+- build Docker
+
+---
+
+## Branch-uri Git
+
+- dev_serbanescu_daniela
+- main_serbanescu_daniela
+
+## Screenshot-uri
+
+### Creare folder proiect
+
+![Creare folder](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/creare_folder_proiect.png?raw=true)
+
+### Clone + venv
+
+![Clone si venv](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/clone_venv.png?raw=true)
+
+### Instalare pachete
+
+![Instalare pachete](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/install_pachete.png?raw=true)
+
+### Creare aplicație Flask
+
+![Aplicatie Flask](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/creat_aplicatia_flask.png?raw=true)
+
+### Rulat teste
+
+![Teste](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/rulat_teste.png?raw=true)
+
+### Testare funcționalitate aplicație
+
+![Functionalitate](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/testare_functionalitate_aplicatie.png?raw=true)
+
+### Testat aplicația
+
+![Testat aplicatia](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/testat_aplicatia.png?raw=true)
+
+### Activare Jenkins
+
+![Jenkins activ](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/activat_jenkins.png?raw=true)
+
+### Testare Jenkins
+
+![Jenkins teste](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/testare_jenkins.png?raw=true)
+
+### Creare Dockerfile
+
+![Dockerfile](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/creare_dockerfile.png?raw=true)
+
+### Build Docker
+
+![Build Docker](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/build_docker.png?raw=true)
+
+### Docker Images
+
+![Docker Images](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/docker_images.png?raw=true)
+
+### Docker PS
+
+![Docker PS](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/docker_ps.png?raw=true)
+
+### Run Docker
+
+![Run Docker](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/run_docker.png?raw=true)
+
+### Push pe Git
+
+![Push Git](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/pus_pe_git.png?raw=true)
+
+### Push pe Main
+
+![Push Main](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_serbanescu_daniela/screenshots/pus_pe_main.png?raw=truescreenshots/pus_pe_main.png)
+
 ---
 
 ## 23. Șimonescu-Diaconu Sebastian-Matei - Pizza
-*(Lipește aici README-ul lui Sebastian)*
+
+# Gastronomie - Pizza 🍕
+**Grupa:** 444D  
+**Student:** Simonescu Matei  
+**Branch:** `dev_Simonescu_Matei`  
+**Element ales:** Pizza
+
+---
+
+## Funcționalitate adăugată
+
+Funcționalitate pentru elementul **Pizza**:
+
+- `app/lib/biblioteca_gastronomie.py`:
+  - `origine_pizza()` — istoricul și originea pizza
+  - `descriere_pizza()` — descrierea și ingredientele pizza
+- `gastronomie.py` — rute adăugate:
+  - `/gastronomie` — tema generală
+  - `/pizza` — informații complete
+  - `/origine_pizza` — originea pizza
+  - `/descriere_pizza` — descrierea pizza
+- `tests/test_pizza.py` — 10 teste unitare
+- `Jenkinsfile` — pipeline Jenkins
+- `Dockerfile` — containerizare
+
+---
+
+## Stadiul implementării
+
+| Componenta | Status |
+|------------|--------|
+| Cod funcționalitate | ✅ Adăugat |
+| Cod testare | ✅ Adăugat |
+| Jenkins | ✅ Configurat |
+| Containerizare | ✅ Realizată |
+| Documentație | ✅ Completă |
+| PR creat | ✅ PR #40 |
+| Review primit | ✅ Primit |
+| Integrat în main | ✅ Integrat în main_Simonescu_Matei |
+
+---
+
+## Testare
+
+### Testare manuală
+```bash
+python3 gastronomie.py
+# Accesează http://localhost:5000/pizza
+```
+
+### Testare cu pytest
+```bash
+source venv/bin/activate
+python3 -m pytest tests/test_pizza.py -v
+```
+
+**Rezultat: 10/10 PASSED ✅**
+![Teste pytest](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Simonescu_Matei/screenshots/pizza_jenkins.png?raw=true)
+
+### Testare cu Jenkins
+Jenkinsfile configurat în branch-ul de dezvoltare.
+
+---
+
+## Containerizare
+
+```bash
+docker build -t gastronomie-pizza .
+docker run -p 5000:5000 gastronomie-pizza
+```
+
+Aplicația rulează în container și poate fi accesată la `http://localhost:5000/pizza`.
+
+### Imagine Docker creată
+![Docker images](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Simonescu_Matei/screenshots/pizza_docker_images.png?raw=true)
+
+### Container creat
+![Docker ps](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Simonescu_Matei/screenshots/pizza_docker_ps.png?raw=true)
+
+### Browser - aplicație în container
+![Browser pizza](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Simonescu_Matei/screenshots/pizza_principal.png?raw=true)
+
+### Consolă container
+![Consola](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_Simonescu_Matei/screenshots/pizza_GET_pizza.png?raw=true)
+
+---
+
 ---
 
 ## 24. Vîjaică Ștefan - Ciorbă de burtă
-*(Lipește aici README-ul lui Ștefan)*
+
+# Proiect VCGJ - Gastronomie: Ciorba de burta
+**Student:** Vijaica Stefan
+**Grupă:** 444D
+
+## Structură Proiect
+
+```text
+.
+├── app/
+│   └── lib/
+│       ├── __init__.py
+│       └── biblioteca_gastronomie.py  # Logica pentru Ciorba de burta
+├── imagini/                          # Capturi de ecran (screenshots)
+├── Dockerfile                        # Configurare imagine Docker
+├── Jenkinsfile                       # Pipeline CI/CD pentru Jenkins
+├── gastronomie.py                    # Aplicația principală Flask
+├── requirements.txt                  # Dependențe Python (Flask)
+├── test_gastronomie.py               # Teste unitare (Unittest)
+└── README.md                         # Documentația proiectului
+
+```
+
+## 1. Funcționalitate
+Am implementat o aplicație Flask pentru tema Gastronomie, axată pe Ciorba de burta. 
+Interfața este interactivă și conține rute pentru:
+* Proveniență 
+* Ingrediente 
+* Mod de preparare 
+
+## 2. Stadiul implementării
+* **Cod aplicație:** Finalizat
+* **Teste unitare:** Implementate în `test_gastronomie.py` 
+* **Jenkins Pipeline:** Configurat și funcțional (Rezultat: PASS) 
+* **Containerizare:** Fisier `Dockerfile` creat și testat
+* **Integrare:** Codul a fost împins pe branch-ul `dev_vijaica_stefan`. Pull Request-ul către `main_vijaica_stefan` a fost creat și se așteaptă/a primit review și aprobare de la un coleg. 
+* **Review-uri acordate:** Pull Request deschis (ID PR:66  verificat de `andreicurcadaniel` ).
+## 3. Containerizare (Capturi de ecran obligatorii)
+### Imaginea de container creată
+
+![Imagine Docker](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vijaica_stefan/screenshots/docker_images.png?raw=true)
+
+### Containerul creat pe baza imaginii
+ 
+![Container Rulând](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vijaica_stefan/screenshots/docker_ps.png?raw=true)
+
+### Browserul accesând aplicația din container 
+
+![Browser App](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vijaica_stefan/screenshots/meniu_aplicatie.png?raw=true)
+
+![Browser App](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vijaica_stefan/screenshots/meniu_aplicatie_1.png?raw=true)
+
+### Mesaje consolă (Log-uri apeluri) 
+
+![Loguri Consolă](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vijaica_stefan/screenshots/loguri.png?raw=true)
+
+### Build Time Trend
+
+![Teste Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vijaica_stefan/screenshots/teste_jenkins.png?raw=true)
+
+![Teste Jenkins](https://github.com/andreiba2/curs_scc_444D_gastronomie/blob/main_vijaica_stefan/screenshots/jenkins_ok.png?raw=true)
+
+
+
 ---
 
 ## 25. Voicu Cătălin-Constantin - Macarons
-*(Lipește aici README-ul lui Cătălin)*
+
+### Documentație Proiect: Macarons (Catalin Voicu)
+
+Element: Macarons
+
+**Funcționalități Implementate:**
+Am dezvoltat rutele de navigare necesare aplicației (`/gastronomie`, `/macarons`, `/descriere_macarons`, `/ingrediente_macarons`), alături de logica aferentă din modulul `biblioteca_gastronomie.py`. 
+
+**Statusul Implementării:**
+Codul sursă pentru secțiunea "Macarons" este complet finalizat. În plus, am integrat un design estetic (CSS personalizat) pentru a oferi o interfață web atractivă și tematică.
+
+**Faza de Testare:**
+Am configurat cu succes fișierul `Jenkinsfile`. Validarea codului s-a realizat prin scripturi `pytest`, iar toate testele au returnat statusul **PASS**. Verificările au fost trecute cu succes atât prin rulare manuală, cât și automat, prin pipeline-ul Jenkins.
+
+**Procesul de Integrare:**
+Am deschis un Pull Request de pe branch-ul de lucru (`dev_[nume_prenume]`) către ramura personală de integrare (`main_[nume_prenume]`). Am atașat dovezile testării și, în acest moment, aștept un *code review* de la un coleg pentru a finaliza integrarea (merge).
+
+**Containerizare (Docker):**
+Aplicația a fost împachetată într-o imagine Docker, iar testele locale confirmă că totul este stabil. Containerul rulează perfect, expunând interfața web conform așteptărilor.
+
+---
+
+**Dovezi Testare Jenkins:**
+<img width="1099" height="369" alt="Screenshot 2026-05-10 185916" src="https://github.com/user-attachments/assets/191c01de-9174-4ffd-904d-b2d4eba93283" />
+
+
+---
+
+<img width="2019" height="862" alt="image" src="https://github.com/user-attachments/assets/705c7498-0e61-4717-b9fb-b92514ad38f7" />
+
+
+
+**Demonstrație Containerizare (Docker)**
+
+**1. Imagine Docker generată:**
+<img width="2152" height="288" alt="image" src="https://github.com/user-attachments/assets/2ee439b8-71bd-4b60-94e5-1cd851680b46" />
+
+
+
+**2. Container activizat și pornit:**
+<img width="2094" height="197" alt="image" src="https://github.com/user-attachments/assets/2e22274a-d013-4e59-999d-e7eae58c9a9c" />
+
+
+
+**3. Accesarea interfeței web din Browser:**
+<img width="2126" height="572" alt="Screenshot 2026-05-10 190043" src="https://github.com/user-attachments/assets/f59f1115-e3e7-49ca-9bfe-2deafee30fe3" />
+
+
+
+**4. Log-urile din consolă confirmând request-urile:**
+<img width="2105" height="656" alt="image" src="https://github.com/user-attachments/assets/3567c5a6-f6de-4677-8ab9-6d84848362f7" />
+
+
+---
+
+**Următorii Pași**
+* Centralizarea informațiilor și adăugarea stadiului meu în documentul `README.md` principal, aflat pe branch-ul `main` al întregii grupe.
+
 ---
