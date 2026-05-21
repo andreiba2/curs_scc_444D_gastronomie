@@ -179,7 +179,7 @@ Imagine instalare Jenkins:
 
 ---
 
-# Stage 8 — Configurare Jenkins Pipeline
+# Stage 8 — Configurare Jenkins Plugins&Pipeline
 
 A fost creat un job Jenkins de tip Pipeline folosind fișierul:
 
@@ -196,7 +196,7 @@ Pipeline-ul execută:
 Imagine configurare Jenkins Pipeline:
 
 ![Configurare Jenkins](screenshots/jenkins_configuration.png)
-
+![Pipeline Build](screenshots/jenkins_pipeline_overview.png)
 ---
 
 # Stage 9 — Rulare Jenkins Pipeline
