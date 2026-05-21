@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Tajin App</title>
+
+    <style>
+
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            width: 600px;
+            background: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>{{ food.name }}</h1>
+
+        <img src="{{ food.image }}" alt="Tajin">
+
+        <p>{{ food.description }}</p>
+
+    </div>
+
+</body>
+</html>
